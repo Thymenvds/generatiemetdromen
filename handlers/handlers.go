@@ -6,7 +6,7 @@ import (
 	"text/template"
 )
 
-func Test() {
+func Test() { //Hoofdletter om te gebruiken in andere packages zoals main package
 	fmt.Println("test")
 }
 

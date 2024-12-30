@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-	"generatiemetdromen/handlers"
+	"generatiemetdromen/handlers" //niet path maar naam van package
 	"net/http"
 )
 
 func main() {
 	fmt.Println("start")
-	handlers.Test()
+	handlers.Test() // functies uit ander packages aanroepen
 
 	http.HandleFunc("/", handlers.Startpage)
 	///////////////  ////////////////////
