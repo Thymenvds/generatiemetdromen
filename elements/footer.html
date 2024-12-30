@@ -1,0 +1,61 @@
+
+<footer  style="margin-top: auto;" class="foot">
+    <div>
+        <h1>MediPlus <span style="font-size: 16px; font-weight: lighter;">Hansbeke</span></h1>
+    
+       
+    </div>
+    <div>
+        <div class="imdiv" style="display: flex; align-items: center; height: 16px;">
+            <img src="static/images/map.png" alt="icoon van email" style="height: 16px; margin-right: 5px;">
+            <p>Hansbekedorp 58</p>
+        </div>
+        <p style="white-space: pre; margin-top: 4px;">       9850 Hansbeke</p>
+        <div class="imdiv" style="display: flex; align-items: center; height: 16px; margin-bottom: 14px;">
+            <img src="static/images/telee.png" alt="icoon van telefoon" style="height: 14px; width: 14px; margin-right: 5px;">
+            <p>09 371 66 61</p>
+        </div>
+        <div class="imdiv" style="display: flex; align-items: center; height: 16px;">
+            <img src="static/images/maill.png" alt="icoon van email" style="height: 8px; margin-right: 5px;">
+            <p>onthaal@dokterbinge.be</p>
+        </div>
+      
+    </div>
+</footer>
+<style>
+.foot{
+    padding:3vh 0;
+    margin-top: 1vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--tertiary);
+}
+
+
+.foot h1{
+    color: var(--mywhite);
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Arial";
+    letter-spacing: -1px;
+    margin: 10px 0px;
+}
+
+.foot p, .imdiv{
+    color: var(--mywhite);
+    font-size: 14px;
+    font-family: "Arial";
+    letter-spacing: -1px;
+}
+
+@media screen and (max-width: 800px){
+   .foot h1 {
+         font-size: 20px;
+   }
+    .foot p, .imdiv{
+          font-size: 12px;
+     }
+}
+</style>

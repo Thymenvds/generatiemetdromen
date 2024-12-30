@@ -1,0 +1,247 @@
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+<script defer>
+    // Add eventlisteners and name documents
+    
+    document.addEventListener('DOMContentLoaded', sidefunc);
+    function sidefunc(){
+        console.log("inside sidefunc, initializing sidebar")
+    try {
+         let openbutton = document.getElementById("openbutton")
+         let closebutton = document.getElementById("closebutton")
+         let sidebar = document.getElementById("sidebar")
+         let anav = document.getElementsByClassName("asidebar")
+         console.log("start")
+         sidebar.onmouseleave = close
+         openbutton.addEventListener("click", open)
+         openbutton.onmouseover= open
+         closebutton.addEventListener("click", close)
+         console.log(anav)
+         for (let a of anav){
+                a.addEventListener("click", close)   
+         }
+     }
+     catch(err) {
+         console.log(err)
+    }};
+
+    function open(){
+        //add try block to prevent errors
+        let windowwidth = window.innerWidth
+        try {
+            if (windowwidth < 800){
+                sidebar.style.width = "100%"  
+            }
+            else{
+                sidebar.style.width = "25%"
+            }
+            sidebar.style.left = "0%";
+        }
+        catch(err) {
+            console.log(err)
+        }
+    }
+    function close(){
+        let windowwidth = window.innerWidth
+        try {
+            if (windowwidth < 800){
+                sidebar.style.width = "-25%" 
+                sidebar.style.left = "-100%"; 
+            }
+            else{
+                
+                sidebar.style.left = "-30%";
+
+            }
+        }
+        catch(err) {
+            console.log(err)
+        }
+    }
+</script>
+<style>
+    @media (max-width: 800px) {
+    #sidebig {
+        display: none;
+    }
+}
+
+@media (min-width: 800px) {
+    #closebutton {
+        display: none;
+    }
+}
+
+#closetap {
+    position: fixed;
+    top: 0;
+    width: 30%;
+    height: 100vh;
+    left: 70%
+}
+
+.openbutton {
+    z-index: 1;
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(2, 2, 2, 0);
+}
+
+#closebutton {
+    position: absolute;
+    top:40px;
+    right: 40px;
+    z-index: 2;
+    border: none;
+    background-color: var(--primary);
+}
+
+
+
+.sidebar {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    border-radius: 0px 10px 10px 0px;
+    display: flex;
+    width: 100%;
+    left: -100%;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--primary);
+    transition: left 0.5s ease-in-out;
+}
+
+.asidebar {
+    height: 3em;
+    padding: 0.5em 2em 0.5em 1em;
+}
+
+
+.asidebar a {
+    font-size: 22px;
+    color: var(--myblack);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.appbar {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0 10px;
+    color: var(--quartiary);
+    text-decoration: none;
+    margin: 0px 30px;
+    letter-spacing: -0.5px;
+
+}
+
+.appbar:hover {
+    color: var(--myblack);
+}
+
+.menurow {
+    display: relative;
+    height: 20vh;
+ 
+}
+
+img.appbarlogo {
+    height: 9vh;
+}
+
+img.appbarlogo {
+    margin-left: 1.5em;
+}
+
+img.cross {
+    margin-right: 1%;
+    height: 40px;
+    width: 40px;
+    
+}
+
+img.menu {
+    width: 25px;
+    height: 25px;
+}
+
+.centercentrum {
+    display: flex;
+    justify-content: center;
+}
+
+.centrum {
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    margin: 25px 0;
+    background-color: var(--primaryo);
+
+    border-radius: 10px;
+}
+
+#sidecontrol {
+    z-index: 0;
+    left: -10px;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+}
+</style>
+</head>
+
+<nav>
+    <div id="sidesmall">
+        <button id="openbutton" class="openbutton">
+            <img src="/static/images/menu.png" alt="icoon menu" class="menu" />
+        </button>
+
+        <div id="sidebar" class="sidebar">
+            <div class="menurow">
+                <!-- <a href="/" on:click={open}>
+                    <img src="/static/images/Mediplus2.png" alt="mediplus logo" class="appbarlogo" />
+                </a> -->
+                <button id="closebutton">
+                    <img src="/static/icons/iconclose.png" alt="icoon om menu te sluiten" class="cross" />
+                </button>
+            </div>
+
+            <div class="asidebar">
+                <a on:click={open} href="/">Home</a>
+                <hr />
+            </div>
+            <div class="asidebar">
+                <a on:click={open} href="/afspraken">Afspraken</a>
+                <hr />
+            </div>
+            <div class="asidebar">
+                <a on:click={open} href="/#teamsection">Team</a>
+                <hr />
+            </div>
+            <div class="asidebar">
+                <a on:click={open} href="/praktisch">Praktisch</a>
+                <hr />
+            </div>
+            <div class="asidebar">
+                <a on:click={open} href="/#dienstverlening">Dienstverlening</a>
+                <hr />
+            </div>
+            <div class="asidebar">
+                <a on:click={open} href="/wachtdienst">Wachtdienst</a>
+                <hr />
+            </div>
+            <div class="asidebar">
+                <a on:click={open} href="/#contact">Contact</a>
+                <hr />
+            </div>
+
+        </div>
+    </div>
+</nav>
+
