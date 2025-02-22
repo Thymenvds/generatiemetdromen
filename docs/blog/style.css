@@ -1,0 +1,13 @@
+.author {
+    background-color: #00EC81;
+    color: #fff;
+    padding: 8px;
+    font-weight: 700;
+}
+.author:hover {
+    text-decoration: underline;
+}
+
+.blog {
+    padding: 50px 10% 0 10%;
+}

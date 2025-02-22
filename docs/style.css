@@ -1,14 +1,15 @@
 /* Reset and Global Styles */
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+  } */
   
   body {
     font-family: "Funnel Display", 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
+    background-color: #faf9f5; /* Antropic bgc */
     color: #333;
   }
   
@@ -113,6 +114,38 @@
       font-size: 32px;
     }
   }
+
+  .thick-underline {
+    text-decoration-line: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #00EC81;
+    font-weight: 800;
+    
+  }
+  .thick-underline-hover:hover {
+      text-decoration-line: underline;
+      text-decoration-thickness: 3px;
+      text-decoration-color: #00EC81;
+  }
+
+  hr {
+    border: none;
+    border-top: 5px double #00EC81;
+    color: #00EC81;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+    margin: 20px 45% 20px 45%;
+  }
+  
+  hr::after {
+    background: #fff;
+    content: '§';
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+  }
+  
 
 
   .material-symbols-outlined {
