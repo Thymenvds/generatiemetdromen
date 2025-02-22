@@ -69,6 +69,20 @@
     padding: 15px 30px;
     font-size: 16px;
     border-radius: 5px;
+    -webkit-transition: background-color 0.25s linear;
+    -moz-transition: background-color 0.25s linear;
+    -o-transition: background-color 0.25s linear;
+    transition: background-color 0.25s linear;
+
+    -webkit-transition: -webkit-transform 0.25s ease;
+  }
+  
+  .hero .btn:hover {
+    -webkit-transform: perspective(100px) scale(1.15);
+    -moz-transform: perspective(100px) scale(1.15);
+    -o-transform: perspective(100px) scale(1.15);
+    transform: perspective(100px) scale(1.15);
+    /* background-color: #cf1700; */
   }
   
   /* Sections */
