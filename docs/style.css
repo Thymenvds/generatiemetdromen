@@ -9,6 +9,10 @@
     color: #00E88B
   }
 
+  ::selection {
+    background: #00E88B;
+  }
+
   body {
     font-family: "Funnel Display", 'Arial', sans-serif;
     line-height: 1.6;
