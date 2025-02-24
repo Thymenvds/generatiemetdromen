@@ -4,7 +4,11 @@
     padding: 0;
     box-sizing: border-box;
   } */
-  
+  a {
+    text-decoration-color: #00E88B;
+    color: #00E88B
+  }
+
   body {
     font-family: "Funnel Display", 'Arial', sans-serif;
     line-height: 1.6;
@@ -20,10 +24,8 @@
   }
   
   .navbar {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
+    padding: 0 10px;
     background-color: #000;
   }
   
@@ -39,13 +41,17 @@
     font-size: 16px;
   }
 
+  .navbar-toggler {
+    color: #fff;
+  }
+
   .navbar ul li a:hover {
-    color:#00EC81;
+    color:#00E88B;
   }
   
   /* Hero Section */
   .hero {
-    background: #00EC81;
+    background: #00E88B;
     color: #fff;
     text-align: center;
     padding: 150px 20px;
@@ -132,20 +138,20 @@
   .thick-underline {
     text-decoration-line: underline;
     text-decoration-thickness: 3px;
-    text-decoration-color: #00EC81;
+    text-decoration-color: #00E88B;
     font-weight: 800;
     
   }
   .thick-underline-hover:hover {
       text-decoration-line: underline;
       text-decoration-thickness: 3px;
-      text-decoration-color: #00EC81;
+      text-decoration-color: #00E88B;
   }
 
   hr {
     border: none;
-    border-top: 5px double #00EC81;
-    color: #00EC81;
+    border-top: 5px double #00E88B;
+    color: #00E88B;
     overflow: visible;
     text-align: center;
     height: 5px;
@@ -160,9 +166,12 @@
     top: -13px;
   }
   
-
+  .inline {
+    display: inline-block;
+  }
 
   .material-symbols-outlined {
+    vertical-align: middle;
     font-variation-settings:
     'FILL' 0,
     'wght' 400,
