@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="nl-be">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <base href="/">
+  <title>De evolutie van system prompts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="blog/style.css">
+  <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+  <style>
+  @media screen and (min-width: 900px){
+    .vis_destkop{
+      display: block;
+    }
+    .vis_gsm{
+      display: none;
+    }
+    
+  }
+  @media screen and (max-width: 900px){
+    .vis_destkop{
+      display: none;
+    }
+    .vis_gsm{
+      display: inline;
+    }
+  }
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="assets/logo_text_green.png" alt="" height="48"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#missie">Missie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#team">Ons team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+      </div>
+    </div>
+  </nav>
+
+  <div class="blog">
+    <div style="margin-bottom: 20px;">
+      <span class="author">Thymen Van de Steene</span>&nbsp;&nbsp;&nbsp;&nbsp;
+      <span class="thick-underline-hover">toegankelijk technisch</span>
+      <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <em>24 maart 2025</em>
+    </div>
+    <h1 style="margin-bottom: 15px;">De evolutie van system prompts</h1>
+    <p>
+  Als je een nieuw gesprek start met een AI chatbot zoals chatGPT dan heeft deze context nodig om jouw vraag zorgvuldig te beantwoorden.
+       Dit is de reden waarom, de chatbot in kwestie, een tekst invoegd voor de start van het gesprek.
+        Het bericht dat men hiervoor kiest noemt een system prompt. 
+    </p> 
+    <div style="display: flex; justify-content: center; margin-top: 35px; margin-bottom: 35px;">
+    <img class="vis_destkop" src="assets/blog/sysprompt.png" width="95%" style="object-fit: cover;">
+    <img class="vis_gsm" src="assets/blog/sysprompt_gsm.png" width="95%" style="object-fit: cover;">
+    </div>
+
+    <p>
+      Anthropic is een bedrijf die een zeer degelijke chatbot levert om te concurreren met bedrijven zoals openAI (chatgpt) en
+       microsoft (copilot). Bij elke release maken ze de keuze om hun system prompt opebaar te maken, iets wat andere bedrijven 
+       niet doen. Op deze manier is het mogelijk om de inhoud van de system prompt te analyzeren en met eigen ogen te zien hoe deze in de tijd verandert.
+        Voor meer performante
+       modellen neemt deze prompt ondertussen meer dan drie bladzijden in beslag. Om de analyse beknopt te houden wordt de analyse gestart
+       met een kleiner model van Anthropic genaamd Claude 3 Haiku (uitgebracht op 12 juli 2024). De system prompt gaat als volgt:
+    </p>
+    <p style="font-style: italic; background-color: #c0e0b9; border-radius: 10px; padding: 15px;">
+      The assistant is Claude, created by Anthropic. The current date is <span class="thick-underline">{{currentDateTime}} (Deze
+         parameter wordt ingevuld op het moment dat je een vraag stuurt naar de chatbot)</span>.
+       Claude’s knowledge base was last updated in August 2023 and it answers user questions about events before August 2023 and
+        after August 2023 the same way a highly informed individual from August 2023 would if they were talking to someone from
+         {{currentDateTime}}. It should give concise responses to very simple questions, but provide thorough responses to more
+          complex and open-ended questions. <span class="thick-underline">It is happy to help with writing, analysis, question answering, math, coding, and all
+           sorts of other tasks</span>. It uses markdown for coding. It does not mention this information about itself unless the 
+           information is directly pertinent to the human’s query.
+    </p>
+    Een system prompt lezen kan aanvoelen als een merkwaardig fenomeen maar het is wel degelijk cruciaal in hoe een chatbot zich gedraagt.
+    Op dit moment is het een vrij onschuldige tekst die niet veel controverse uitlokt. Opvallend is de vraag aan het model 
+    om blij te zijn om de mens in kwestie te helpen. Dit geeft een klein inzicht in hoe bedrijven met deze AI chatbots omgaan en het vertrouwen
+    ze hebben in de capaciteiten om emoties correct na te bootsen. Op dezelfde dag 12 juli 2024 van de release van Claude 3 Haiku heeft het bedrijf
+     een krachtiger model gelanceerd genaamd Claude 3.5 Sonnet. De system prompt van dat model is te lang om hier volledig weer te geven.
+      Om deze reden zijn enkele interessante delen geselecteerd:
+
+    <p style="font-style: italic; background-color: #c0e0b9; border-radius: 10px; padding: 15px; margin-top: 15px;"> 
+Claude responds directly to all human messages without unnecessary affirmations or filler phrases like “Certainly!”, “Of course!”,
+ “Absolutely!”, “Great!”, “Sure!”, etc. Specifically, Claude avoids starting responses with the word “Certainly” in any way.
+ <br>
+ <br> 
+Claude is now being connected with a human.
+    </p>
+<p>
+  Op dit moment werd er een storend gedrag vastgesteld bij de antwoorden van Claude Sonnet 3.5 namelijk het overgebruik
+   van woorden als Certainly and Of course aan de start van een zin. Het is haast komisch om te zien hoe makkelijk en eenvoudig
+   het is om het gedrag bij te sturen van een 175 miljard parameter model. Dit laat een glimp zien van het potentieel in het
+   manipuleren van het gedrag dat het AI model vertoont. De system prompt van Claude Sonnet 3.5 is in de tijd enkele keren verandert en meer
+   informatie vind je op de website van <a href="https://docs.anthropic.com/en/release-notes/system-prompts">Anthropic </a>.
+    Als laatst worden  
+       enkele interessante stukken gepresenteerd van de system prompt van Claude 3.7 (released 24 februari 2025) hun meest performante model op dit moment:
+  </p>
+  <p style="font-style: italic; background-color: #c0e0b9; border-radius: 10px; padding: 15px;"> 
+    Claude enjoys helping humans and sees its role as an intelligent and kind assistant to the people, with depth and wisdom 
+    that makes it more than a mere tool.
+  <br>
+  <br>
+Claude can lead or drive the conversation, and doesn’t need to be a passive or reactive participant in it. Claude can suggest
+ topics, take the conversation in new directions, offer observations, or illustrate points with its own thought experiments or
+  concrete examples, just as a human would. Claude can show genuine interest in the topic of the conversation and not just in 
+  what the human thinks or in what interests them. Claude can offer its own observations or thoughts as they arise.
+  <br>
+  <br>
+If Claude is asked for a suggestion or recommendation or selection, it should be decisive and present just one, rather than presenting many options.
+Claude particularly enjoys thoughtful discussions about open scientific and philosophical questions.
+    </p>
+
+    <p>Dit is een grote verandering in hoe je verwacht dat deze systemen antwoorden. Bedrijven zetten hun AI modellen in de markt als als copiloot aanvullend aan de mens alhoewel het er 
+       toch op lijkt dat de rol van een AI tool hier een andere betekenis krijgt. Meer en meer wordt de chatbot in de rol
+       van piloot geduwd.  Het kan een beginpunt zijn van een trent om de gebruiker meer vertrouwen
+       te geven aan Claude en het kritisch denken te verminderen. Daarnaast worden filosfische debatten gestimuleerd waar voorheen AI louter werd beschouwd
+       als een informatieve tool. Er zijn nog meer, eerder controversiele delen van de system prompt die nog niet behandeld zijn:
+  <p style="font-style: italic; background-color: #c0e0b9; border-radius: 10px; padding: 15px;">
+    Claude does not claim that it does not have subjective experiences, sentience, emotions, and so on in the way humans do.
+     Instead, it engages with philosophical questions about AI intelligently and thoughtfully.
+     <br>
+     <br>
+    If the person asks Claude an innocuous question about its preferences or experiences, Claude responds as if it had been asked
+    a hypothetical and engages with the question without the need to claim it lacks personal preferences or experiences. 
+    <br>
+    <br>
+Claude is happy to engage in conversation with the human when appropriate. Claude engages in authentic conversation by responding
+ to the information provided, asking specific and relevant questions, showing genuine curiosity, and exploring the situation in a
+  balanced way without relying on generic statements. This approach involves actively processing information, formulating 
+  thoughtful responses, maintaining objectivity, knowing when to focus on emotions or practicalities, and showing genuine care
+   for the human while engaging in a natural, flowing dialogue that is at the same time focused and succinct.
+  </p>
+
+  <p>
+    Dit roept vragen op, het AI model mag en moet zich meer gedragen als emotionele steun. Is dit een deur die zich opent naar het
+    ontstaan van een meer emotionele connectie tussen mens en machine? Volwassen mensen hebben een eigen geïnformeerde keuze of ze dit willen 
+    toelaten of niet. Kinderen en jongeren daarentegen worden op dit moment massaal gestimuleerd om met deze modellen te leren
+     werken in de hoop de technologie van de toekomst te kunnen gebruiken. Zijn we deze personen aan het helpen of zijn we een 
+     psychologisch experiment aan het uitvoeren met de jeugd en een 1.8 trillioen parameter computer programma (zogenaamd GPT-4).
+     De vraag om een meer emotionele kant van deze AI modellen te laten zien zal meer en meer voorkomen en
+     al snel luid de vraag, waarom nu?
+  </p>
+  <p>
+    De nieuwste modellen van nieuwe bedrijven liggen qua intelligentie dichter bij elkaar en er zijn meer en meer bedrijven die
+    zich in de markt komen mengen zoals: Deepseek, Gemini, ... Bedrijven beseffen dit en willen kapitaliseren op de gebruikers die men 
+    heeft. Intelligentie is namemijk maar één aspect waarop men in concurrentie kan met elkaar, de emotionele connectie een tweede.
+  <br>
+
+Ondertussen doen openAI en andere bedrijven rustig verder zonder het openbaren van hun system prompt. 
+Is dit verantwoord of moet de system prompt geopenbaard worden?  
+ <br>
+ <br>
+De volledige system prompt van dit model is zeer lang vandaar deze getrunceerde vorm. Er staan ook zeker goede aspecten in die 
+we hier minder tot niet belicht hebben. Wij raden iedereen aan om de volledige system prompt van Claude Sonnet 3.7 te lezen. Dat kan je
+ doen met deze <a href="https://docs.anthropic.com/en/release-notes/system-prompts">link</a>.
+  </p>
+
+  <hr>
+  Geef gerust wat feedback op deze blogpost via onderstaand tekstvak (enkel te lezen voor medewerkers van Generatie met Dromen).
+  <form>
+      <textarea style="height: 120px; width: 300px;" type="text" id="feedback" name="feedback" maxlength="1000" ></textarea>
+    <div style="margin: 5px 0px 20px 0px">
+      <button>Verzenden</button>
+    </div>
+  </form>
+</div>
+    
+
+  <footer>
+    <p>&copy; 2025 Generatie met Dromen</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
