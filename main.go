@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"time"
 )
 
 func main() {
@@ -31,5 +32,5 @@ func systemprompts_feedback(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	defer f.Close()
-	f.WriteString(string(responseData) + " \n" + "-----------------" + "\n")
+	f.WriteString(time.Now().Format(time.RFC822) + ": " + string(responseData) + " \n" + "-----------------" + "\n")
 }
