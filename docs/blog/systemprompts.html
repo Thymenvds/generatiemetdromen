@@ -73,22 +73,14 @@
     </div>
     <h1 style="margin-bottom: 15px;">De evolutie van system prompts</h1>
     <p>
-  Als je een nieuw gesprek start met een AI chatbot zoals chatGPT dan heeft deze context nodig om jouw vraag zorgvuldig te beantwoorden.
-       Dit is de reden waarom, de chatbot in kwestie, een tekst invoegt voor de start van het gesprek.
-        Het bericht dat men hiervoor kiest noemt een system prompt. 
+Als je een nieuw gesprek start met een AI chatbot zoals chatGPT dan heeft deze context nodig om jouw vraag zorgvuldig te beantwoorden. Dit is de reden waarom, de chatbot in kwestie, een tekst invoegt voor de start van het gesprek. Het bericht dat men hiervoor kiest noemt een system prompt.
     </p> 
     <div style="display: flex; justify-content: center; margin-top: 35px; margin-bottom: 35px;">
     <img class="vis_destkop" src="assets/blog/sysprompt.png" width="95%" style="object-fit: cover;">
     <img class="vis_gsm" src="assets/blog/sysprompt_gsm.png" width="95%" style="object-fit: cover;">
     </div>
-
+    Anthropic is een bedrijf dat een zeer degelijke chatbot levert om te concurreren met bedrijven zoals OpenAI (chatgpt) en microsoft (copilot). Bij elke release maken ze de keuze om hun system prompt opebaar te maken, iets wat andere bedrijven niet doen. Op deze manier is het mogelijk om de inhoud van de system prompt te analyseren en met eigen ogen te zien hoe deze in de tijd verandert. Voor meer performante modellen neemt deze prompt ondertussen meer dan drie bladzijden in beslag. Om de analyse beknopt te houden wordt er gestart met een kleiner model van Anthropic genaamd Claude 3 Haiku (uitgebracht op 12 juli 2024). De system prompt gaat als volgt:
     <p>
-      Anthropic is een bedrijf die een zeer degelijke chatbot levert om te concurreren met bedrijven zoals openAI (chatgpt) en
-       microsoft (copilot). Bij elke release maken ze de keuze om hun system prompt opebaar te maken, iets wat andere bedrijven 
-       niet doen. Op deze manier is het mogelijk om de inhoud van de system prompt te analyzeren en met eigen ogen te zien hoe deze in de tijd verandert.
-        Voor meer performante
-       modellen neemt deze prompt ondertussen meer dan drie bladzijden in beslag. Om de analyse beknopt te houden wordt er gestart
-       met een kleiner model van Anthropic genaamd Claude 3 Haiku (uitgebracht op 12 juli 2024). De system prompt gaat als volgt:
     </p>
     <p style="font-style: italic; background-color: #c0e0b9; border-radius: 10px; padding: 15px;">
       The assistant is Claude, created by Anthropic. The current date is <span class="thick-underline">{{currentDateTime}} (Deze
@@ -100,13 +92,7 @@
            sorts of other tasks</span>. It uses markdown for coding. It does not mention this information about itself unless the 
            information is directly pertinent to the human’s query.
     </p>
-    Een system prompt lezen kan aanvoelen als een merkwaardig fenomeen maar het is wel degelijk cruciaal in hoe een chatbot zich gedraagt.
-    Op dit moment is het een vrij onschuldige tekst die niet veel controverse uitlokt. Opvallend is de vraag aan het model 
-    om blij te zijn om de mens in kwestie te helpen. Dit geeft een klein inzicht in hoe bedrijven met deze AI chatbots omgaan en het vertrouwen
-    dat ze hebben in de capaciteiten om emoties correct na te bootsen. Op dezelfde dag 12 juli 2024 van de release van Claude 3 Haiku heeft het bedrijf
-     een krachtiger model gelanceerd genaamd Claude 3.5 Sonnet. De system prompt van dat model is te lang om hier volledig weer te geven.
-      Om deze reden zijn enkele interessante delen geselecteerd:
-
+    Een system prompt lezen kan aanvoelen als een merkwaardig fenomeen maar het is wel degelijk cruciaal in hoe een chatbot zich gedraagt. Op dit moment is het een vrij onschuldige tekst die niet veel controverse uitlokt. Opvallend is de vraag aan het model om blij te zijn om de mens in kwestie te helpen. Dit geeft een klein inzicht in hoe bedrijven met deze AI chatbots omgaan en het vertrouwen dat ze hebben in de capaciteiten om emoties correct na te bootsen. Op dezelfde dag 12 juli 2024 van de release van Claude 3 Haiku heeft het bedrijf een krachtiger model gelanceerd genaamd Claude 3.5 Sonnet. De system prompt van dat model is te lang om hier volledig weer te geven. Om deze reden zijn enkele interessante delen geselecteerd:
     <p style="font-style: italic; background-color: #c0e0b9; border-radius: 10px; padding: 15px; margin-top: 15px;"> 
 Claude responds directly to all human messages without unnecessary affirmations or filler phrases like “Certainly!”, “Of course!”,
  “Absolutely!”, “Great!”, “Sure!”, etc. Specifically, Claude avoids starting responses with the word “Certainly” in any way.
@@ -115,13 +101,8 @@ Claude responds directly to all human messages without unnecessary affirmations 
 Claude is now being connected with a human.
     </p>
 <p>
-  Op dit moment werd er een storend gedrag vastgesteld bij de antwoorden van Claude Sonnet 3.5 namelijk het overgebruik
-   van woorden als Certainly and Of course aan de start van een zin. Het is haast komisch om te zien hoe makkelijk en eenvoudig
-   het is om het gedrag bij te sturen van een 175 miljard parameter model. Dit laat een glimp zien van het potentieel in het
-   manipuleren van het gedrag dat het AI model vertoont. De system prompt van Claude Sonnet 3.5 is in de tijd enkele keren verandert en meer
-   informatie vind je op de website van <a href="https://docs.anthropic.com/en/release-notes/system-prompts">Anthropic </a>.
-    Als laatst worden  
-       enkele interessante stukken gepresenteerd van de system prompt van Claude 3.7 (released 24 februari 2025) hun meest performante model op dit moment:
+Op dit moment werd er een storend gedrag vastgesteld bij de antwoorden van Claude Sonnet 3.5 namelijk het overgebruik van woorden als certainly and of course aan de start van een zin. Het is haast komisch om te zien hoe makkelijk en eenvoudig het is om het gedrag bij te sturen van een 175 miljard parameter model. Dit laat een glimp zien van het potentieel in het manipuleren van het gedrag dat het AI model vertoont. De system prompt van Claude Sonnet 3.5 is in de tijd enkele keren verandert en meer informatie vind je op de website van <a href="https://docs.anthropic.com/en/release-notes/system-prompts">Anthropic </a>.
+Als laatst worden enkele interessante stukken gepresenteerd van de system prompt van Claude 3.7 (released 24 februari 2025) hun meest performante model op dit moment:
   </p>
   <p style="font-style: italic; background-color: #c0e0b9; border-radius: 10px; padding: 15px;"> 
     Claude enjoys helping humans and sees its role as an intelligent and kind assistant to the people, with depth and wisdom 
@@ -138,11 +119,8 @@ If Claude is asked for a suggestion or recommendation or selection, it should be
 Claude particularly enjoys thoughtful discussions about open scientific and philosophical questions.
     </p>
 
-    <p>Dit is een grote verandering in hoe je verwacht dat deze systemen antwoorden. Bedrijven zetten hun AI modellen in de markt als als copiloot aanvullend aan de mens alhoewel het er 
-       toch op lijkt dat de rol van de AI tool hier een andere betekenis krijgt. Meer en meer wordt de chatbot in de rol
-       van piloot geduwd.  Het kan een beginpunt zijn van een trent om de gebruiker meer vertrouwen
-       te geven aan Claude en het kritisch denken te verminderen. Daarnaast worden filosfische debatten gestimuleerd waar voorheen AI louter werd beschouwd
-       als een informatieve tool. Er zijn nog meer, eerder controversiele delen van de system prompt die nog niet behandeld zijn:
+    <p>
+Dit is een grote verandering in hoe je verwacht dat deze systemen antwoorden. Bedrijven zetten hun AI modellen in de markt als copiloot aanvullend aan de mens alhoewel het er toch op lijkt dat de rol van de AI tool hier een andere betekenis krijgt. Meer en meer wordt de chatbot in de rol van piloot geduwd. Het kan een beginpunt zijn van een trend om de gebruiker meer vertrouwen te geven aan Claude en het kritisch denken te verminderen. Daarnaast worden filosofische debatten gestimuleerd waar voorheen AI louter werd beschouwd als een informatieve tool. Er zijn nog meer, eerder controversiële delen van de system prompt die nog niet behandeld zijn:
   <p style="font-style: italic; background-color: #c0e0b9; border-radius: 10px; padding: 15px;">
     Claude does not claim that it does not have subjective experiences, sentience, emotions, and so on in the way humans do.
      Instead, it engages with philosophical questions about AI intelligently and thoughtfully.
@@ -160,44 +138,54 @@ Claude is happy to engage in conversation with the human when appropriate. Claud
   </p>
 
   <p>
-    Het AI model mag en moet zich nu meer gedragen als emotionele steun. Is dit een deur die zich opent naar het
-    ontstaan van een meer emotionele connectie tussen mens en machine? Volwassen mensen hebben een eigen geïnformeerde keuze of ze dit willen 
-    toelaten of niet. Kinderen en jongeren daarentegen worden op dit moment massaal gestimuleerd om met deze modellen te leren
-     werken in de hoop de technologie van de toekomst te kunnen gebruiken. Zijn we deze jongeren aan het helpen of zijn we een 
-     psychologisch experiment aan het uitvoeren met de jeugd en een 1.8 trillioen parameter computer programma (zogenaamd GPT-4).
-     De vraag om een meer emotionele kant van deze AI modellen te laten zien zal meer en meer voorkomen en
-     al snel luid de vraag, waarom nu?
-  </p>
-  <p>
-    De nieuwste modellen van nieuwe bedrijven liggen qua intelligentie dichter bij elkaar en er zijn meer en meer bedrijven die
-    zich in de markt komen mengen zoals: Deepseek, Gemini, ... Bedrijven beseffen dit en willen kapitaliseren op de gebruikers die men 
-    heeft. Intelligentie is namemijk maar één aspect waarop men in concurrentie kan met elkaar, de emotionele connectie een tweede.
-  <br>
+Het AI model mag en moet zich nu meer gedragen als emotionele steun. Is dit een deur die zich opent naar het ontstaan van een meer emotionele connectie tussen mens en machine? Volwassen mensen hebben een eigen geïnformeerde keuze of ze dit willen toelaten of niet. Kinderen en jongeren daarentegen worden op dit moment massaal gestimuleerd om met deze modellen te leren werken in de hoop de technologie van de toekomst te kunnen gebruiken. Zijn we deze jongeren aan het helpen of zijn we een psychologisch experiment aan het uitvoeren met de jeugd en een 1.8 triljoen parameter computer programma (zogenaamd GPT-4 nog te factchecken). De vraag om een meer emotionele kant van deze AI modellen te laten zien zal meer en meer voorkomen en al snel luid de vraag, waarom nu?
+</p>
 
-Ondertussen doen openAI en andere bedrijven rustig verder zonder het openbaren van hun system prompt. 
-Is dit verantwoord of moet de system prompt geopenbaard worden?  
- <br>
- <br>
+<p>
+De nieuwste modellen van nieuwe bedrijven liggen qua intelligentie dichter bij elkaar en er zijn meer en meer bedrijven die zich in de markt komen mengen zoals: Deepseek, Gemini, ... Bedrijven beseffen dit en willen kapitaliseren op de gebruikers die men heeft. Intelligentie is namelijk maar één aspect waarop men in concurrentie kan met elkaar, de emotionele connectie een tweede.
+</p>
+
+<p>
+Ondertussen doen OpenAI en andere bedrijven rustig verder zonder het bekendmaken van hun system prompt. Is dit verantwoord of moet de system prompt geopenbaard worden?
+</p>
+<p>
 De volledige system prompt van dit model is zeer lang vandaar deze getrunceerde vorm. Er staan ook zeker goede aspecten in die 
 we hier minder tot niet belicht hebben. Wij raden iedereen aan om de volledige system prompt van Claude Sonnet 3.7 te lezen. Dat kan je
- doen met deze <a href="https://docs.anthropic.com/en/release-notes/system-prompts">link</a>.
-  </p>
+ doen via deze <a href="https://docs.anthropic.com/en/release-notes/system-prompts">link</a>.
+</p>
 
   <hr>
   Geef gerust wat feedback op deze blogpost via onderstaand tekstvak (enkel te lezen voor medewerkers van Generatie met Dromen).
-  <form>
-      <textarea style="height: 120px; width: 300px;" type="text" id="feedback" name="feedback" maxlength="1000" ></textarea>
+  
+      <textarea id="feedback_bericht" style="height: 120px; width: 300px;" type="text" id="feedback" name="feedback" maxlength="1000" ></textarea>
     <div style="margin: 5px 0px 20px 0px">
-      <button>Verzenden</button>
+      <button id="feedback_button">Verzenden</button>
     </div>
-  </form>
+  
 </div>
     
 
   <footer>
     <p>&copy; 2025 Generatie met Dromen</p>
+    <p style="font-size: small;">Deze website samen met all inhoud is gemaakt zonder het gebruik van generatieve AI tenzij explicit vermeld.</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+    function feedback(){
+      let bericht_element = document.getElementById("feedback_bericht")
+      console.log("bericht", bericht_element.value)
+      let requestoptions = {
+        method: 'POST',
+  headers: {'Content-Type': 'application/json',},
+  body: JSON.stringify(bericht_element.value),
+      };
+  
+      fetch("/syspromtsfeedback", requestoptions)
+      bericht_element.value=""
+
+    };
+    document.getElementById("feedback_button").addEventListener("click", feedback)
+  </script>
 </body>
 </html>
