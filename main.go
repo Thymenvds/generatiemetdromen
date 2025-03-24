@@ -22,6 +22,7 @@ func systemprompts_feedback(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println(err)
 	}
+	fmt.Println(string(responseData))
 	f, err := os.OpenFile("docs/blog/systemprompts_log.txt",
 		os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
