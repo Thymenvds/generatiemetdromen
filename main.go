@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"io"
-	"log"
 	"net/http"
 	"os"
 	"time"
@@ -21,12 +20,12 @@ func systemprompts_feedback(w http.ResponseWriter, r *http.Request) {
 	// fmt.Println(r.GetBody())
 	responseData, err := io.ReadAll(r.Body)
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println(err)
 	}
 	f, err := os.OpenFile("docs/blog/systemprompts_log.txt",
 		os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
-		log.Println(err)
+		fmt.Println(err)
 		return
 	}
 	defer f.Close()
