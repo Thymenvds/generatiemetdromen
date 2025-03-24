@@ -24,8 +24,8 @@ services:
         dockerfile: Dockerfile
      networks:
         - caddy_public
-     ports:
-       - "8080:8080"
+    #  ports:
+    #    - "8080:8080"
      volumes:
        - "./docs/blog/logs:/app/docs/blog/logs"
    
