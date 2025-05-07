@@ -11,3 +11,28 @@
 .blog {
     padding: 50px 10% 0 10%;
 }
+
+h4 {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #00E88B;
+}
+
+ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+ol li {
+    display: table-row;
+}
+
+ol li a { /* assuming an anchor child.  Can be anything */
+    display: table-cell;
+    vertical-align: middle;
+    padding: 1em 3em;
+}
