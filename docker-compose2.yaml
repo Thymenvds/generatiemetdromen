@@ -28,10 +28,6 @@ services:
     #    - "8080:8080"
      volumes:
        - "./docs/blog/logs:/app/docs/blog/logs"
-  jouw_visie:
-    build:
-      context: .
-      dockerfile: mijnvisie/Dockerfile
    
 
 
