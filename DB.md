@@ -31,3 +31,5 @@ We use fastAPI to route our request to db queries
 docker compose up --build
 
 de website en de server staat nu online respectievelijk op localhost:8080 and localhost:8000
+
+De database staat zowel in website als server service met het pad db/ relatief ten opzichte van waar je je commando's start. Zie code server.py als voorbeeld waar je aan die database geraakt
