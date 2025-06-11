@@ -18,9 +18,9 @@ class Answer(BaseModel):
     question_id: str
     option: int
 
-users = PysonDB("../db/users.json")
-questions = PysonDB("../db/questions.json")
-answers = PysonDB("../db/answers.json")
+users = PysonDB("db/users.json")
+questions = PysonDB("db/questions.json")
+answers = PysonDB("db/answers.json")
 
 app = FastAPI()
 

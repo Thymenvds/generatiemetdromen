@@ -1,6 +1,8 @@
-localhost {
+http://localhost:8000 {
+	reverse_proxy mijnvisie:8000
+}
+http://localhost:8080 {
 	reverse_proxy app:8080
-	tls thymenvds@hotmail.com
 }
 # molarvis.com, www.molarvis.com {
 # 	redir https://generatiemetdromen.com 301

@@ -1,10 +1,13 @@
-FROM python:3
 
-WORKDIR /app
+FROM python:3.9
 
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+WORKDIR /server
 
-COPY . .
+COPY ./mijnvisie/requirements.txt /server/requirements.txt
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "445"]
+RUN pip install --no-cache-dir --upgrade -r /server/requirements.txt
+
+COPY ./mijnvisie /server
+
+# CMD [ "ls" ]
+CMD ["fastapi", "run", "server.py", "--port", "8000"]
