@@ -1,0 +1,3 @@
+fastapi[standard]
+pysondb-v2
+pydantic
