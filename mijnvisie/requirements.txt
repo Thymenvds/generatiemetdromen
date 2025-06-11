@@ -1,0 +1,5 @@
+fastapi[standard]
+pysondb-v2
+passlib[bcrypt]
+pyjwt
+pydantic
