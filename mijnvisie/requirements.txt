@@ -3,3 +3,4 @@ pysondb-v2
 passlib[bcrypt]
 pyjwt
 pydantic
+pydantic_settings

@@ -1,22 +1,37 @@
-from typing import Union, List
+from datetime import datetime, timedelta, timezone
+from typing import Union, List, Annotated
 
-# for API
-from fastapi import FastAPI
+from enum import Enum
+
+
+import jwt
+from fastapi import Depends, FastAPI, HTTPException, status
+from jwt.exceptions import InvalidTokenError
 from pydantic import BaseModel
 
 # for DB
 from pysondb import PysonDB
 
 ## MODELS ##
+class QuestionType(str, Enum):
+    mc = "mc"
+    open = "open"
+
+
 class Question(BaseModel):
     name: str
+    type: QuestionType
     title: str = None
-    options: List[str]
+    options: List[str] | None = None
 
 class Answer(BaseModel):
     user_id: str
     question_id: str
     option: int
+
+
+
+
 
 users = PysonDB("db/users.json")
 questions = PysonDB("db/questions.json")
@@ -24,15 +39,15 @@ answers = PysonDB("db/answers.json")
 
 app = FastAPI()
 
-@app.get("/user/")
-def read_user(name: str = None):
-    if name is None:
-        return users.get_all()
-    return users.getBy({"name":name})
 
-@app.put("/user/{name}")
-def add_user(name: str):
-    users.add({"name": name})
+# to get a string like this run:
+# openssl rand -hex 32
+
+app = FastAPI()
+
+
+
+
 
 @app.get("/question/")
 def read_question(id: str = None):

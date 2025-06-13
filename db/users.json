@@ -1,11 +1,29 @@
 {
     "version": 2,
     "keys": [
-        "name"
+        "email",
+        "first_name",
+        "hashed_password",
+        "is_active",
+        "last_name",
+        "user_type"
     ],
     "data": {
-        "173290689250014378": {
-            "name": "Test"
+        "255785791816946835": {
+            "email": "admin@example.com",
+            "first_name": "Ad",
+            "last_name": "Min",
+            "user_type": "admin",
+            "is_active": true,
+            "hashed_password": "$2b$12$v0HA4rR9Eo89Zys/f3slz.VehMpueIYzyYv73ZIzkT8qfTXJDR0D."
+        },
+        "624088658077112553": {
+            "email": "test@example.com",
+            "first_name": "T",
+            "last_name": "Est",
+            "user_type": "user",
+            "is_active": true,
+            "hashed_password": "$2b$12$InnUcVrSK6alF6Lca0KHkOcCj5csEWIGheyVv1scbHuTJnAX/xMJK"
         }
     }
 }
