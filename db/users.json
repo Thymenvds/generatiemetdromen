@@ -9,21 +9,21 @@
         "user_type"
     ],
     "data": {
-        "255785791816946835": {
-            "email": "admin@example.com",
+        "287718707515395557": {
+            "email": "admin",
             "first_name": "Ad",
             "last_name": "Min",
             "user_type": "admin",
             "is_active": true,
-            "hashed_password": "$2b$12$v0HA4rR9Eo89Zys/f3slz.VehMpueIYzyYv73ZIzkT8qfTXJDR0D."
+            "hashed_password": "$2b$12$tK9q4K4op0eKNLWd3pINve7kfzhF7TNx5xdVOA4aXtrKKgpU9DpNq"
         },
-        "624088658077112553": {
-            "email": "test@example.com",
-            "first_name": "T",
-            "last_name": "Est",
+        "169914210122287072": {
+            "email": "test",
+            "first_name": "test",
+            "last_name": "test",
             "user_type": "user",
             "is_active": true,
-            "hashed_password": "$2b$12$InnUcVrSK6alF6Lca0KHkOcCj5csEWIGheyVv1scbHuTJnAX/xMJK"
+            "hashed_password": "$2b$12$3/9Nhr5CAX1sJajqmXoYeeqNvIIwCVW3jVNpA1nSbpNG7g7isVypa"
         }
     }
 }

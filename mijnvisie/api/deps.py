@@ -19,14 +19,18 @@ reusable_oauth2 = OAuth2PasswordBearer(
 
 
 user_db = PysonDB("db/users.json")
-def get_db():
+question_db = PysonDB("db/questions.json")
+def get_user_db():
     return user_db
+def get_question_db():
+    return question_db
 
-SessionDep = Annotated[PysonDB, Depends(get_db)]
+UserSessionDep = Annotated[PysonDB, Depends(get_user_db)]
+QuestionSessionDep = Annotated[PysonDB, Depends(get_question_db)]
+
 TokenDep = Annotated[str, Depends(reusable_oauth2)]
 
-
-def get_current_user(session: SessionDep, token: TokenDep) -> User:
+def get_current_user(session: UserSessionDep, token: TokenDep) -> User:
     try:
         payload = jwt.decode(
             token, security.SECRET_KEY, algorithms=[security.ALGORITHM]

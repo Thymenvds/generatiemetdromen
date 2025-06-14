@@ -9,7 +9,7 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
 ALGORITHM = "HS256"
-SECRET_KEY = secrets.token_urlsafe(32)
+SECRET_KEY = "2d550e7420b26774e7dba706b25fbe4510a26d10160f59bb60f45a0a3abddf42"
 ACCESS_TOKEN_EXPIRE_MINUTES = 15
 
 

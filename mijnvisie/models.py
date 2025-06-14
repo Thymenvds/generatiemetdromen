@@ -1,5 +1,8 @@
+from typing import List
+
 from pydantic import EmailStr
 from pydantic import BaseModel
+from pydantic_extra_types.pendulum_dt import DateTime
 
 from enum import Enum
 
@@ -75,3 +78,38 @@ class TokenPayload(BaseModel):
 class NewPassword(BaseModel):
     token: str
     new_password: str
+
+
+### QUESTIONS ###
+
+class QuestionType(str, Enum):
+    mc = "mc"
+    open = "open"
+
+class QuestionBase(BaseModel):
+    type: QuestionType
+    title: str
+    description: str | None = None
+    options: List[str] | None = None
+
+# Properties to receive via API on creation
+class QuestionCreate(QuestionBase):
+    pass
+
+class QuestionUpdate(BaseModel):
+    type: QuestionType | None = None
+    title: str | None = None
+    description: str | None = None
+    options: List[str] | None = None
+    new_version: bool = False
+
+class QuestionInDB(QuestionBase):
+    previous_version: str | None = None
+    created: DateTime
+
+class Question(QuestionInDB):
+    id: str
+
+# class Questions(BaseModel):
+#     questions: List[Question]
+#     count: int
