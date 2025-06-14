@@ -24,6 +24,14 @@
             "user_type": "user",
             "is_active": true,
             "hashed_password": "$2b$12$T4WBvV8s1cZFvyBL5zT5teqyV2rXPspvRSxn9XNniz4LenU0QYlXu"
+        },
+        "140850059819180447": {
+            "email": "dantevanpoucke@gmail.com",
+            "first_name": "Dante",
+            "last_name": "Van Poucke",
+            "user_type": "user",
+            "is_active": true,
+            "hashed_password": "$2b$12$62HgovkOnpkBinQ2d2QpkuJNdw5BMGG0K2DPCr/qz1eZYKaqfoZrG"
         }
     }
 }
