@@ -110,6 +110,17 @@ class QuestionInDB(QuestionBase):
 class Question(QuestionInDB):
     id: str
 
-# class Questions(BaseModel):
-#     questions: List[Question]
-#     count: int
+class AnswerBase(BaseModel):
+    user_id: str
+    question_id: str
+    answer: str | int
+
+class AnswerCreate(BaseModel):
+    question_id: str
+    answer: str | int
+
+class AnswerInDB(AnswerBase):
+    created: DateTime
+
+class Answer(AnswerInDB):
+    id: str

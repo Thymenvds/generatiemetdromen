@@ -20,13 +20,17 @@ reusable_oauth2 = OAuth2PasswordBearer(
 
 user_db = PysonDB("db/users.json")
 question_db = PysonDB("db/questions.json")
+answer_db = PysonDB("db/answers.json")
 def get_user_db():
     return user_db
 def get_question_db():
     return question_db
+def get_answer_db():
+    return answer_db
 
 UserSessionDep = Annotated[PysonDB, Depends(get_user_db)]
 QuestionSessionDep = Annotated[PysonDB, Depends(get_question_db)]
+AnswerSessionDep = Annotated[PysonDB, Depends(get_answer_db)]
 
 TokenDep = Annotated[str, Depends(reusable_oauth2)]
 

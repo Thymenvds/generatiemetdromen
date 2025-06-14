@@ -9,21 +9,21 @@
         "user_type"
     ],
     "data": {
-        "287718707515395557": {
+        "100969196353531702": {
             "email": "admin",
             "first_name": "Ad",
             "last_name": "Min",
             "user_type": "admin",
             "is_active": true,
-            "hashed_password": "$2b$12$tK9q4K4op0eKNLWd3pINve7kfzhF7TNx5xdVOA4aXtrKKgpU9DpNq"
+            "hashed_password": "$2b$12$DjBF.j9scoFC/c0kLshjE.BEflG4twVtGErtcD3cUc0bBf12POiUm"
         },
-        "169914210122287072": {
+        "185682993872932340": {
             "email": "test",
             "first_name": "test",
             "last_name": "test",
             "user_type": "user",
             "is_active": true,
-            "hashed_password": "$2b$12$3/9Nhr5CAX1sJajqmXoYeeqNvIIwCVW3jVNpA1nSbpNG7g7isVypa"
+            "hashed_password": "$2b$12$T4WBvV8s1cZFvyBL5zT5teqyV2rXPspvRSxn9XNniz4LenU0QYlXu"
         }
     }
 }

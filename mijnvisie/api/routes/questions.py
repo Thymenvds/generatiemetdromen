@@ -14,9 +14,7 @@ router = APIRouter(prefix="/questions", tags=["questions"])
 
 
 @router.get("/")
-def read_questions(
-    session: QuestionSessionDep, current_user: CurrentUser, skip: int = 0, limit: int = 100
-) -> Any:
+def read_questions(session: QuestionSessionDep) -> Any:
     """
     Retrieve Questions.
     """
