@@ -1,7 +1,5 @@
-import 'dart:io';
 // import 'package:geco_app/repository/user_repository.dart';
 import 'package:get/get.dart';
-import 'package:mijn_visie_app/api/client.dart';
 import 'package:mijn_visie_app/models/user.dart';
 import 'package:mijn_visie_app/api/login.dart' as api;
 // import 'package:google_sign_in/google_sign_in.dart';
@@ -10,7 +8,7 @@ class UserController extends GetxController {
   /// user details of the logged in user
   User? user;
   /// bool if user is logged in
-  final isLogged = false.obs;
+  bool isLogged = false;
   // UserRepository repository = UserRepository();
   // final GoogleSignIn _googleSignIn = GoogleSignIn();
 
@@ -40,7 +38,7 @@ class UserController extends GetxController {
     User? userTemp = await api.login(email, password);
     if (userTemp != null) {
       user = userTemp;
-      isLogged.value = true;
+      isLogged = true;
       // TODO is update necessary?
       update();
       return true;
@@ -82,12 +80,13 @@ class UserController extends GetxController {
 //     return false;
 //   }
 
-//   /// logout user
-//   logout() async {
-//     await repository.logoutUser();
-//     user = null;
-//     isLogged.value = false;
-//   }
+  /// logout user
+  logout() async {
+    api.logoutUser();
+    user = null;
+    isLogged = false;
+    update();
+  }
 
 //   /// delete accoun of logged in user
 //   deleteAccount() async {
