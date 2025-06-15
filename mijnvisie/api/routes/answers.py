@@ -5,7 +5,9 @@ from fastapi import APIRouter, HTTPException, Depends
 from fastapi.encoders import jsonable_encoder
 
 from mijnvisie.api.deps import CurrentUser, AnswerSessionDep, get_current_active_superuser
+# from api.deps import CurrentUser, AnswerSessionDep, get_current_active_superuser
 from mijnvisie.models import Answer, AnswerCreate, AnswerInDB, Message
+# from models import Answer, AnswerCreate, AnswerInDB, Message
 
 
 from pysondb.errors import IdDoesNotExistError

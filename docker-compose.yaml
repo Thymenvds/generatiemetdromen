@@ -35,7 +35,7 @@ services:
     build:
       dockerfile: mijnvisie/Dockerfile
     volumes:
-      - "./db:/server/db"
+      - "./db:/mijnvisie/db"
     networks:
       - python_server
 
