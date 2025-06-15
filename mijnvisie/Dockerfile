@@ -9,4 +9,4 @@ RUN pip install --no-cache-dir --upgrade -r /server/requirements.txt
 COPY ./mijnvisie /server
 
 # CMD [ "ls" ]
-CMD ["fastapi", "run", "server.py", "--port", "8000"]
+CMD ["fastapi", "run", "main.py", "--port", "8000"]
