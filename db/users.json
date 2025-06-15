@@ -32,6 +32,22 @@
             "user_type": "user",
             "is_active": true,
             "hashed_password": "$2b$12$62HgovkOnpkBinQ2d2QpkuJNdw5BMGG0K2DPCr/qz1eZYKaqfoZrG"
+        },
+        "320408072791640485": {
+            "email": "thymenvds@hotmail.com",
+            "first_name": "Thymen",
+            "last_name": "Van de Steene",
+            "user_type": "user",
+            "is_active": true,
+            "hashed_password": "$2b$12$hgWFMalaIE6UXO6wUD4UouhAvb/AAyoyXV94jKuq3smGTiiWjbL3K"
+        },
+        "248100168229857220": {
+            "email": "thymenvdsn@hotmail.com",
+            "first_name": "Thymenn",
+            "last_name": "Van de Steenen",
+            "user_type": "user",
+            "is_active": true,
+            "hashed_password": "$2b$12$Sxbp3OKXJLeykhnSy5MXnOUdfecXdW.ob8UVBfVRSr9bYcOR/waqq"
         }
     }
 }

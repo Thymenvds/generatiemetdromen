@@ -29,21 +29,23 @@ Future<Dio> client() async {
   // dio.options.baseUrl = "http://10.0.2.2:8000";
   dio.options.connectTimeout = Duration(seconds: 10); //10s
   dio.options.receiveTimeout = Duration(seconds: 5);
-  dio.interceptors.add(InterceptorsWrapper(
-    onRequest: (options, handler) {
-      requestInterceptors(options);
-      handler.next(options);
-    },
-    onResponse: (response, handler) {
-      responseInterceptors(response);
-      tokenInterceptor(response, dio);
-      handler.next(response);
-    },
-    onError: (err, handler) {
-      errorInterceptors(err);
-      handler.next(err);
-    },
-  ));
+  dio.interceptors.add(
+    InterceptorsWrapper(
+      onRequest: (options, handler) {
+        requestInterceptors(options);
+        handler.next(options);
+      },
+      onResponse: (response, handler) {
+        responseInterceptors(response);
+        tokenInterceptor(response, dio);
+        handler.next(response);
+      },
+      onError: (err, handler) {
+        errorInterceptors(err);
+        handler.next(err);
+      },
+    ),
+  );
   // dio.interceptors.add(CookieManager(
   //     PersistCookieJar(storage: FileStorage(appDocPath + '/cookies/'))));
   return dio;
@@ -51,13 +53,16 @@ Future<Dio> client() async {
 
 tokenInterceptor(Response response, Dio dio) {
   if (response.realUri.path == "/login/access-token") {
-    dio.options.headers["Authorization"] = "Bearer ${response.data["access_token"]}";
+    dio.options.headers["Authorization"] =
+        "Bearer ${response.data["access_token"]}";
     logger.d("got token ${dio.options.headers['Authorization']}");
   }
 }
 
 requestInterceptors(RequestOptions options) {
-  logger.d("${options.method}: ${options.uri}\n${options.data}\n${options.headers}");
+  logger.d(
+    "${options.method}: ${options.uri}\n${options.data}\n${options.headers}",
+  );
   return options;
 }
 
@@ -69,26 +74,28 @@ responseInterceptors(Response response) {
 errorInterceptors(DioException error) {
   logger.d("${error.error}\n${error.type}\n${error.response}");
   switch (error.type) {
-
     /// It occurs when url is opened timeout.
     case DioExceptionType.connectionTimeout:
       g.Get.defaultDialog(
-          title: "Connection timeout",
-          middleText: "Make sure that you have a working internet connection.");
+        title: "Connection timeout",
+        middleText: "Make sure that you have a working internet connection.",
+      );
       break;
 
     /// It occurs when url is sent timeout.
     case DioExceptionType.sendTimeout:
       g.Get.defaultDialog(
-          title: "Send timeout",
-          middleText: "Make sure that you have a working internet connection.");
+        title: "Send timeout",
+        middleText: "Make sure that you have a working internet connection.",
+      );
       break;
 
     ///It occurs when receiving timeout.
     case DioExceptionType.receiveTimeout:
       g.Get.defaultDialog(
-          title: "Receive timeout",
-          middleText: "Make sure that you have a working internet connection.");
+        title: "Receive timeout",
+        middleText: "Make sure that you have a working internet connection.",
+      );
       break;
 
     default:

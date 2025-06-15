@@ -9,9 +9,131 @@
         "type"
     ],
     "data": {
-        "851686636259949630": {
+        "851686636259949631": {
+            "type": "stat",
+            "title": "Wat moet voor jou de prioriteit zijn, regularisatie of innovatie",
+            "description": null,
+            "options": [
+                "Innovatie",
+                "Regularisatie"
+            ],
+            "previous_version": "851686636259949630",
+            "created": "2025-06-14T11:24:23.555941"
+        },
+        "851686636259949648": {
+            "type": "open",
+            "title": "Op welke plaats zou robotica verboden moet zijn voor jou?",
+            "description": null,
+            "options": [
+                "Bedrijven",
+                "Overheid"
+            ],
+            "previous_version": "851686636259949630",
+            "created": "2025-06-14T11:24:23.555941"
+        },
+        "851686636259949658": {
+            "type": "open",
+            "title": "Mogen humane robots op scholen aanwezig zijn?",
+            "description": null,
+            "options": [
+                "Bedrijven",
+                "Overheid"
+            ],
+            "previous_version": "851686636259949630",
+            "created": "2025-06-14T11:24:23.555941"
+        },
+        "851686636259949633": {
+            "type": "stat",
+            "title": "Wie moet beslissen over de censuur op output van AI modellen? De overheid of bedrijven?",
+            "description": null,
+            "options": [
+                "Bedrijven",
+                "Overheid"
+            ],
+            "previous_version": "851686636259949630",
+            "created": "2025-06-14T11:24:23.555941"
+        },
+        "851686636259949634": {
+            "type": "stat",
+            "title": "Wil je een vorm van universeel basis inkomen waar competitie tussen mensen nog steeds aanwezig is?",
+            "description": null,
+            "options": [
+                "Niet akkoord",
+                "Akkoord"
+            ],
+            "previous_version": "851686636259949630",
+            "created": "2025-06-14T11:24:23.555941"
+        },
+        "851686636259949635": {
+            "type": "stat",
+            "title": "Wil je meer studies naar het universeel basis inkomen?",
+            "description": null,
+            "options": [
+                "Niet akkoord",
+                "Akkoord"
+            ],
+            "previous_version": "851686636259949630",
+            "created": "2025-06-14T11:24:23.555941"
+        },
+        "851686636259949636": {
             "type": "mc",
-            "title": "Wat is 1-1=?",
+            "title": "Ik voel me zeker om vragen te beantwoorden over een toekomst met AI",
+            "description": null,
+            "options": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "previous_version": "851686636259949630",
+            "created": "2025-06-14T11:24:23.555941"
+        },
+        "851686636259949637": {
+            "type": "mc",
+            "title": "Ik voel me goed genoeg geïnformeerd om vragen rond het een maatschappij met AI te beantwoorden.",
+            "description": null,
+            "options": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "previous_version": "851686636259949630",
+            "created": "2025-06-14T11:24:23.555941"
+        },
+        "851686636259949638": {
+            "type": "mc",
+            "title": "Hoeveel vertrouwen heb je in AI veiligheid?",
+            "description": null,
+            "options": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "previous_version": "851686636259949630",
+            "created": "2025-06-14T11:24:23.555941"
+        },
+        "851686636259949639": {
+            "type": "stat",
+            "title": "Maak de robot zo dom mogelijk om de taak uit te voeren",
+            "description": null,
+            "options": [
+                "Niet akkoord",
+                "Akkoord"
+            ],
+            "previous_version": "851686636259949630",
+            "created": "2025-06-14T11:24:23.555941"
+        },
+        "851686636259949632": {
+            "type": "open",
+            "title": "Hoe ziet een utopie met AI eruit voor jou?",
             "description": null,
             "options": [
                 "0",
@@ -21,9 +143,81 @@
             "previous_version": "851686636259949630",
             "created": "2025-06-14T11:24:23.555941"
         },
+        "851686636259949630": {
+            "type": "open",
+            "title": "Hoe ziet een dystopie met AI eruit voor jou?",
+            "description": null,
+            "options": [
+                "0",
+                "1",
+                "2"
+            ],
+            "previous_version": "851686636259949630",
+            "created": "2025-06-14T11:24:23.555941"
+        },
+        "261672403389277197": {
+            "type": "open",
+            "title": "Wat ga je doen als het sprekend orakel er is?",
+            "description": null,
+            "options": [
+                "0",
+                "1",
+                "2"
+            ],
+            "previous_version": null,
+            "created": "2025-06-14T11:22:46.876492Z"
+        },
+        "261672403389277127": {
+            "type": "open",
+            "title": "Hoe is je mening en gevoel over AI geëvolueerd in de laatste jaren (ChatGPT gelanceerd in november 2022)? ",
+            "description": null,
+            "options": [
+                "0",
+                "1",
+                "2"
+            ],
+            "previous_version": null,
+            "created": "2025-06-14T11:22:46.876492Z"
+        },
+        "261672403389377127": {
+            "type": "open",
+            "title": "Waarvoor gebruik jij AI?",
+            "description": null,
+            "options": [
+                "0",
+                "1",
+                "2"
+            ],
+            "previous_version": null,
+            "created": "2025-06-14T11:22:46.876492Z"
+        },
+        "261272403389377127": {
+            "type": "open",
+            "title": "Wat zijn de gelijkenissen en verschillen die de AI-revolutie heeft vergeleken met het internet, de gsm, de industriële revolutie, …?",
+            "description": null,
+            "options": [
+                "0",
+                "1",
+                "2"
+            ],
+            "previous_version": null,
+            "created": "2025-06-14T11:22:46.876492Z"
+        },
+        "261272403389387127": {
+            "type": "open",
+            "title": "Maakt het je persoonlijk uit of iets met of zonder AI is gemaakt?",
+            "description": null,
+            "options": [
+                "0",
+                "1",
+                "2"
+            ],
+            "previous_version": null,
+            "created": "2025-06-14T11:22:46.876492Z"
+        },
         "261672403389277196": {
-            "type": "mc",
-            "title": "Wat is 1+1=?",
+            "type": "open",
+            "title": "Met welke ethische kwestie rond AI heb jij het meeste moeite?",
             "description": null,
             "options": [
                 "0",
@@ -34,4 +228,5 @@
             "created": "2025-06-14T11:22:46.876492Z"
         }
     }
+
 }
