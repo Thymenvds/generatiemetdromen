@@ -30,5 +30,9 @@ Future<User?> register(String firstname, String lastname, String email, String p
       "password": password
     }
   ).then<User?>((value) => User.fromJson(value.data)
-  ).catchError((err) => null);;
+  ).catchError((err) => null);
+}
+
+void logoutUser() {
+  dioClient.options.headers.remove("Authorization");
 }

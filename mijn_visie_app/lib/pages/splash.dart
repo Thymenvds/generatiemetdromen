@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:mijn_visie_app/controllers/base_page_controller.dart';
+import 'package:mijn_visie_app/controllers/my_questions_controller.dart';
 // import 'package:get/get.dart';
 import 'package:mijn_visie_app/pages/login.dart';
 // import '../controller/user_controller.dart';
@@ -12,6 +15,8 @@ class SplashPage extends StatelessWidget {
     // Get.put(UserController());
     // Get.put(ProductController());
     // Get.put(OrderController());
+    Get.put(BasePageController());
+    Get.put(MyQuestionsController());
   }
 
   @override

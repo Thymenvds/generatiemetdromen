@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, List
 from datetime import datetime
 
 from fastapi import APIRouter, HTTPException, Depends
@@ -14,12 +14,12 @@ router = APIRouter(prefix="/questions", tags=["questions"])
 
 
 @router.get("/")
-def read_questions(session: QuestionSessionDep) -> Any:
+def read_questions(session: QuestionSessionDep) -> List[Question]:
     """
     Retrieve Questions.
     """
-    return session.get_all()
-
+    questions = session.get_all()
+    return [Question(**question, id=id) for id, question in questions.items()]
 
 @router.get("/{id}", response_model=Question)
 def read_question(session: QuestionSessionDep, current_user: CurrentUser, id: str) -> Any:

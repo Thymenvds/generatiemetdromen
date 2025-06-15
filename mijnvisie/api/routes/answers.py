@@ -22,8 +22,10 @@ def read_answer(
     Retrieve Answers.
     """
     if current_user.is_superuser:
-        return session.get_all()
-    return session.get_by_query(lambda data: data["user_id"] == current_user.id)
+        answers = session.get_all()
+    else:
+        answers = session.get_by_query(lambda data: data["user_id"] == current_user.id)
+    return [Answer(**answer, id=id) for id, answer in answers.items()]
 
 
 @router.get("/{id}", response_model=Answer)
