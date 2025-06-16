@@ -17,6 +17,47 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
   <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+  <style>
+  .accordion-body {
+  display: grid; 
+  transition: 800ms grid-template-rows ease;
+  padding: 0px;
+}
+
+.accordion-inside {
+  overflow: hidden;
+}
+
+.bolletjes-layout{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 20px;
+}
+
+.bolletje{
+  height: 12px;
+  width: 12px;
+  border-radius: 800px 800px;
+  border: 1px solid black;
+  background-color: white;
+  margin: 0px 14px;
+}
+.col{
+  transition: 800ms scale ease;
+  transition: 800ms translate ease;
+  
+}
+.klein_scherm{
+  display: flex;
+}
+@media screen and (min-width: 575px) {
+  .klein_scherm{
+    display: none;
+  }
+}
+</style>
 </head>
 <body>
 
@@ -83,15 +124,18 @@
   <section id="team">
     <h2>Ons team</h2>
     <div class="row row-cols-1 row-cols-xl-4 row-cols-md-3 row-cols-sm-2 g-4">
-      <div class="col">
+      <div id="team_thymen_badge" class="col">
         <div class="card h-100">
           <div style="position: relative">
             <img src="assets/team/thymen.jpg" alt="Thymen Van de Steene" class="card-img-top" height="350px" style="object-fit: cover;">
-            <div class="badge" style="position: absolute; bottom: 8px; right:8px; background-color:#00e88b; font-size:1em;">Stichter</div>
+            <div class="badge" style="position: absolute; bottom: 8px; right:8px; background-color:#00e88b; font-size:1em;">Bestuurder</div>
           </div>
           <div class="card-body">
             <h5 class="card-title thick-underline">Thymen Van de Steene</h5>
-            <p class="card-text">Masterstudent @ <a href="https://molmod.ugent.be">CMM</a></p>
+            <p>Bezieler</p>
+            <div style="margin: 7px;" class="klein_scherm">
+              <div id="team_thymen_accordion" class="accordion"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -100,7 +144,7 @@
         <div class="card h-100">
           <div style="position: relative;">
             <img src="assets/team/dante.jpg" alt="Dante Van Poucke" class="card-img-top" height="350px" style="object-fit: cover;">
-            <div class="badge" style="position: absolute; bottom: 8px; right:8px; background-color:#00e88b; font-size:1em;">Stichter</div>
+            <div class="badge" style="position: absolute; bottom: 8px; right:8px; background-color:#00e88b; font-size:1em;">Bestuurder</div>
           </div>
           <div class="card-body">
             <h5 class="card-title thick-underline">Dante Van Poucke</h5>
@@ -164,7 +208,7 @@
     <p>&copy; 2025 Generatie met Dromen</p>
     <p style="font-size: small;">Deze website samen met all inhoud is gemaakt zonder het gebruik van generatieve AI tenzij explicit vermeld.</p>
   </footer>
-
+  <script src="team_text.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="scripts.js"></script>
 </body>

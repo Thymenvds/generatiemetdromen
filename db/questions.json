@@ -20,6 +20,20 @@
             "previous_version": "851686636259949630",
             "created": "2025-06-14T11:24:23.555941"
         },
+        "851686646259949631": {
+            "type": "mc",
+            "title": "Regularisatie moet een prioriteit zijn boven innovatie",
+            "description": null,
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "previous_version": "851686636259949630",
+            "created": "2025-06-14T11:24:23.555941"
+        },
         "851686636259949648": {
             "type": "open",
             "title": "Op welke plaats zou robotica verboden moet zijn voor jou?",
@@ -122,7 +136,7 @@
         },
         "851686636259949639": {
             "type": "stat",
-            "title": "Maak de robot zo dom mogelijk om de taak uit te voeren",
+            "title": "Maak de robot zo dom als de taak die het moet uitvoeren",
             "description": null,
             "options": [
                 "Niet akkoord",
