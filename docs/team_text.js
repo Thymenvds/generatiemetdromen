@@ -1,5 +1,5 @@
 console.log("hello from team_text")
-let team_ids = ["team_thymen"]
+let team_ids = ["team_thymen", "team_dante"]
 
 info_team={
     "team_thymen":{
@@ -18,8 +18,25 @@ info_team={
             "type": "stat",
             "answer":"Akkoord"
 
-        }
-        
+        }},
+
+        "team_dante":{
+        "Ik voel me goed genoeg geïnformeerd om vragen rond het een maatschappij met AI te beantwoorden.":
+         {
+            "type": "mc",
+            "answer": "4",
+            "description": null
+        },
+            "Regularisatie moet een prioriteit zijn boven innovatie.":{
+                "type":"mc",
+                "answer": "2",
+                "description": "Lorem ipsum Lorem ipusm lKSLMJFSKLJFKDSLjsdfklmjfksldqjfkdsf dskfqlmkjdsfjsq dsklmfjksd sjqdfm dsqlmksjdf dkslmfjskdfj kdslmfqjksldmfj kldsmfjsklmfj"
+            },
+        "Op welke plaats zou humanoid robotica verboden moet zijn voor jou?":{
+            "type": "stat",
+            "answer":"Kleuterschool"
+
+        }   
     }
 }
 // document.getElementById("example").innerHTML = html;
@@ -37,6 +54,7 @@ for (let i of team_ids){
                 `
                 //<div style="display: flex;"><p id="${i}_knop_sluit" style="color: #9fd8c2; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1); text-align: center; padding: 3px 15px; border-radius: 10px;">Lees meer </p> </div>
     document.getElementById(i+"_accordion").innerHTML = init_myhtml;
+    let myhtml=``
     for (var key in info_team[i]){
         let info_i = info_team[i][key]
         console.log(info_i["type"])
