@@ -22,6 +22,7 @@
   display: grid; 
   transition: 800ms grid-template-rows ease;
   padding: 0px;
+  grid-template-rows: 0fr;
 }
 
 .accordion-inside {
@@ -51,6 +52,24 @@
 }
 .klein_scherm{
   display: flex;
+}
+.team-bio{
+  transition: 800ms opacity ease; position: absolute;
+  bottom: 0px;
+  right:0px;
+  background-color:#00e88b; 
+  font-size:1em; 
+  height: 350px; 
+  opacity: 0; 
+  padding: 10px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+.bio-tekst{
+  color: #ffffff; 
+  font-size: 1em; 
+  font-weight: 500;
 }
 /* @media screen and (min-width: 575px) {
   .klein_scherm{
@@ -128,11 +147,15 @@
         <div class="card h-100">
           <div style="position: relative">
             <img src="assets/team/thymen.jpg" alt="Thymen Van de Steene" class="card-img-top" height="350px" style="object-fit: cover;">
+            <div id="team_thymen_image" class="card-img-top team-bio">
+              <p class="bio-tekst">Het gebruik van AI in applicaties ligt bijna altijd in een grijze zone. Het evenwicht tussen automatisatie en mankracht is een zoektocht die feedback en input vraagt van de hele maatschappij.</p>
+            </div>
             <div class="badge" style="position: absolute; bottom: 8px; right:8px; background-color:#00e88b; font-size:1em;">Bestuurder</div>
+
           </div>
           <div class="card-body">
             <h5 class="card-title thick-underline">Thymen Van de Steene</h5>
-            <p>Bezieler</p>
+            <p>Stichter</p>
             <div style="margin: 7px;" class="klein_scherm">
               <div id="team_thymen_accordion" class="accordion"></div>
             </div>
@@ -144,6 +167,9 @@
         <div class="card h-100">
           <div style="position: relative;">
             <img src="assets/team/dante.jpg" alt="Dante Van Poucke" class="card-img-top" height="350px" style="object-fit: cover;">
+            <div id="team_dante_image" class="card-img-top team-bio">
+              <p class="bio-tekst">Wel ja zo gaat hetWel ja zo gaat het. Dus we gaan eens testen hoeveel kan ik hier typen. Zou ik mijn belangrijk boodschap kwijtkunnen, met nuance en context.</p>
+            </div>
             <div class="badge" style="position: absolute; bottom: 8px; right:8px; background-color:#00e88b; font-size:1em;">Bestuurder</div>
           </div>
           <div class="card-body">

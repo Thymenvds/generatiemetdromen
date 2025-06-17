@@ -1,4 +1,3 @@
-console.log("hello from team_text")
 let team_ids = ["team_thymen", "team_dante"]
 
 info_team={
@@ -39,31 +38,26 @@ info_team={
         }   
     }
 }
-// document.getElementById("example").innerHTML = html;
-function open(){
-    
-}
+
 let myhtml=""
 for (let i of team_ids){
-    console.log(i, "here")
     let init_myhtml = `
                 <div id="${i}_grid_template_row" class="accordion-body">
                 <div id="${i}" class="accordion-inside">  </div>
-                <div id="${i}_knop" style="display: flex;"><p style="color:rgb(177, 215, 200); box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1); text-align: center; padding: 3px 15px; border-radius: 6px;">Lees meer </p> </div>
-                </div>
+                
+                <p id="${i}_knop" style="color: #9fd8c2; transition: 800ms opacity ease; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1); text-align: center; padding: 3px 15px; border-radius: 6px; opacity:1; height:2em; overflow:hidden;">Lees meer </p>
+                <p id="${i}_knop_sluit" style="color: #9fd8c2; transition: 800ms opacity ease; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1); text-align: center; padding: 3px 15px; border-radius: 6px; opacity:0; height:0em; overflow:hidden;"> Lees minder </p> 
+                
+        
                 `
-                //<div style="display: flex;"><p id="${i}_knop_sluit" style="color: #9fd8c2; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1); text-align: center; padding: 3px 15px; border-radius: 10px;">Lees meer </p> </div>
+
     document.getElementById(i+"_accordion").innerHTML = init_myhtml;
     let myhtml=``
     for (var key in info_team[i]){
         let info_i = info_team[i][key]
-        console.log(info_i["type"])
-        console.log(key)
         if (info_i["type"]=="mc"){
-        console.log("in mc")
         let bollen = Array(5).fill(`<span class="bolletje"> </span>`)
         bollen[Number(info_i["answer"])-1] = `<span class="bolletje" style="background-color:#00e88b; height:17px; width:17px; border:1.5px solid black;" > </span>`
-        console.log(bollen.join(' '))
         myhtml += `        
         <hr>
         <p>${key}</p>
@@ -82,27 +76,36 @@ for (let i of team_ids){
 document.getElementById(i).innerHTML = myhtml;
     
 
-    document.getElementById(i+"_knop").style.transition= "800ms opacity ease"
-    document.getElementById(i+"_grid_template_row").style.gridTemplateRows="0fr"
-    console.log('dfsq',window.getComputedStyle(document.getElementById(i+"_knop")).getPropertyValue("opacity"))
-    document.getElementById(i+"_knop").addEventListener("click", ()=>{
-        if (window.getComputedStyle(document.getElementById(i+"_knop")).getPropertyValue("opacity") =="1"){
-        document.getElementById(i+"_knop").style.opacity=0.7
-        document.getElementById(i+"_knop").style.marginTop="15px"
+
+    document.getElementById(i+"_knop").addEventListener("click", (e)=>{
+        e.target.style.transitionDelay= "0ms"
+        e.target.style.opacity=0
+        e.target.style.boxShadow="2px 2px 2px 2px rgba(0, 0, 0, 0)"
+        e.target.style.height="0em"
+        let e2 =document.getElementById(i+"_knop_sluit")
+        e2.style.transitionDelay= "800ms"
+        e2.style.height="2em"
+        e2.style.boxShadow="2px 2px 2px 2px rgba(0, 0, 0, 0.1)"
+        e2.style.opacity=1
+        document.getElementById(i+"_image").style.opacity="0.92"
+
+
         document.getElementById(i+"_grid_template_row").style.gridTemplateRows="1fr"
-    }
-        else {
-            document.getElementById(i+"_knop").style.opacity=1
-            document.getElementById(i+"_knop").style.marginTop="0px"
-            document.getElementById(i+"_grid_template_row").style.gridTemplateRows="0fr"
-        }
     })
-    // document.getElementById(i+"_knop_sluit").addEventListener("click", ()=>{
-    //     console.log("noted")
-    //     document.getElementById(i+"_grid_template_row").style.gridTemplateRows="0fr"
-    //     document.getElementById(i+"_knop").style.opacity=1})
+    document.getElementById(i+"_knop_sluit").addEventListener("click", (e)=>{
+        let e2 = document.getElementById(i+"_knop")
+        e2.style.transitionDelay= "800ms"
+        e2.style.height="2em"
+        e2.style.boxShadow="2px 2px 2px 2px rgba(0, 0, 0, 0.1)"
+        e2.style.opacity=1
 
-    
+        e.target.style.transitionDelay= "0ms"
+        e.target.style.boxShadow="2px 2px 2px 2px rgba(0, 0, 0, 0)"
+        e.target.style.height="0em"
+        e.target.style.opacity=0
 
+        document.getElementById(i+"_image").style.opacity="0"
+        document.getElementById(i+"_grid_template_row").style.gridTemplateRows="0fr"
+    })
 }
-console.log(myhtml)
+// console.log(myhtml)
