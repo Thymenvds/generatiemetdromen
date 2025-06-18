@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl-be">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /> 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
@@ -18,76 +20,162 @@
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
   <link rel="manifest" href="assets/favicon_io/site.webmanifest">
   <style>
-  .accordion-body {
-  display: grid; 
-  transition: 800ms grid-template-rows ease;
-  padding: 0px;
-  grid-template-rows: 0fr;
-}
+    /* Om het effect te maken die uitschijft bij ons team in het geval van een klein scherm */
+    .accordion-body {
+      display: grid;
+      transition: 800ms grid-template-rows ease;
+      padding: 0px;
+      grid-template-rows: 0fr;
+    }
 
-.accordion-inside {
-  overflow: hidden;
-}
+    .accordion-inside {
+      overflow: hidden;
+    }
 
-.bolletjes-layout{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 20px;
-}
+    .bolletjes-layout {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 20px;
+    }
 
-.bolletje{
-  height: 12px;
-  width: 12px;
-  border-radius: 800px 800px;
-  border: 1px solid black;
-  background-color: white;
-  margin: 0px 14px;
-}
-.col{
-  transition: 800ms scale ease;
-  transition: 800ms translate ease;
-  
-}
-.klein_scherm{
-  display: flex;
-}
-.team-bio{
-  transition: 800ms opacity ease; position: absolute;
-  bottom: 0px;
-  right:0px;
-  background-color:#00e88b; 
-  font-size:1em; 
-  height: 350px; 
-  opacity: 0; 
-  padding: 10px; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-}
-.bio-tekst{
-  color: #ffffff; 
-  font-size: 1em; 
-  font-weight: 500;
-}
-@media screen and (min-width: 576px) {
-  .klein_scherm{
-    display: none;
-  }
-}
- .team-bio:hover{
-    opacity: 0.92;
- }
+    /* De bollen bij ons team */
+    .bolletje {
+      height: 12px;
+      width: 12px;
+      border-radius: 800px 800px;
+      border: 1px solid black;
+      background-color: white;
+      margin: 0px 14px;
+    }
 
-</style>
+    .col {
+      transition: 800ms scale ease;
+      transition: 800ms translate ease;
+
+    }
+
+    .klein_scherm {
+      display: flex;
+    }
+
+    .team-bio {
+      transition: 800ms opacity ease;
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      background-color: #00e88b;
+      font-size: 1em;
+      height: 350px;
+      opacity: 0;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .team-bio2 {
+      transition: 800ms opacity ease;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      background-color: #00e88b;
+      font-size: 1em;
+      height: 100%;
+      opacity: 0;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .bio-tekst {
+      color: #ffffff;
+      font-size: 1em;
+      font-weight: 500;
+    }
+
+    @media screen and (min-width: 576px) {
+      .klein_scherm {
+        display: none;
+      }
+
+      .klein_team {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 575px) {
+      .groot-team {
+        display: none;
+      }
+
+      #groot-team {
+        display: none;
+      }
+    }
+
+    .team-bio:hover {
+      opacity: 0.92;
+    }
+
+    .groot-hover:hover>.team-bio2 {
+      opacity: 1;
+    }
+
+    .groot-bol-1,
+    .groot-bol-2 {
+      margin: 0px 5px;
+      height: 10px;
+      width: 10px;
+      border: 1.5px solid black;
+      border-radius: 3px;
+      transition: ease background-color 800ms;
+    }
+
+    .groot-bol-1 {
+      background-color: black;
+    }
+
+    .groot-bol-2 {
+      background-color: white;
+    }
+
+    .groot-hover:hover .groot-bol-1 {
+      background-color: white;
+    }
+
+    .groot-hover:hover .groot-bol-2 {
+      background-color: black;
+    }
+
+    /* .team-bio2:hover {
+      opacity: 1;
+    } */
+
+    .groot-lay-out {
+      display: grid;
+      grid-template-columns: 1fr;
+
+    }
+
+    @media screen and (min-width: 1450px) {
+      .groot-lay-out {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="assets/logo_text_green.png" alt="" height="48"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="material-symbols-outlined">menu</span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -121,13 +209,16 @@
   <section id="missie">
     <h2>Onze Missie</h2>
     <p>
-      <span class="thick-underline">Een veranderende maatschappij in kaart brengen:</span> AI heeft vele toepassingen en zal meer en meer invloed hebben op uw leven.
-      Inzicht in het gebruik van deze technologie op het werk en gedurende vrije tijd is cruciaal om te begrijpen hoe onze samenleving evolueert,
+      <span class="thick-underline">Een veranderende maatschappij in kaart brengen:</span> AI heeft vele toepassingen en
+      zal meer en meer invloed hebben op uw leven.
+      Inzicht in het gebruik van deze technologie op het werk en gedurende vrije tijd is cruciaal om te begrijpen hoe
+      onze samenleving evolueert,
       en reflectie is nodig om duidelijke en geïnformeerde beslissingen te nemen.
     </p>
     <hr />
     <p>
-      <span class="thick-underline">Langetermijndoelen beschermen:</span> Een zinvol leven heeft voor ieder een eigen betekenis.
+      <span class="thick-underline">Langetermijndoelen beschermen:</span> Een zinvol leven heeft voor ieder een eigen
+      betekenis.
       Mensen leggen zich toe op hun studies, jobs en relaties en steken hier veel tijd, werk en passie in.
       AI heeft de kracht om onze maatschappij en interesses te beïnvloeden.
       Wanneer dit gebeurt, moet men oude of nieuwe langetermijndoelen van de mens beschermen.
@@ -135,7 +226,8 @@
     </p>
     <hr />
     <p>
-      <span class="thick-underline">Menselijke autonomie:</span> Op dit moment begint één constante meer en meer naar voor te schuiven; AI meer controle geven leidt tot een competitief voordeel.
+      <span class="thick-underline">Menselijke autonomie:</span> Op dit moment begint één constante meer en meer naar
+      voor te schuiven; AI meer controle geven leidt tot een competitief voordeel.
       Maar waar trekken we de grens en voelen we ons meer bedreigd in plaats van geholpen?
       De sciencefictionverhalen lijken dichterbij te komen en het debat moet gestart worden.
       Laat ons weten waar jij jouw grens trekt en vul de enquête in.
@@ -146,15 +238,22 @@
   <!-- Team Section -->
   <section id="team">
     <h2>Ons team</h2>
-    <div class="row row-cols-1 row-cols-xl-4 row-cols-md-3 row-cols-sm-2 g-4">
+
+
+
+    <!-- Dit is voor een klein scherm en wordt enkel getoond op en GSM -->
+    <div class="row row-cols-1 row-cols-xl-4 row-cols-md-3 row-cols-sm-2 g-4 klein_team">
       <div id="team_thymen_badge" class="col">
         <div class="card h-100">
           <div style="position: relative">
-            <img src="assets/team/thymen.jpg" alt="Thymen Van de Steene" class="card-img-top" height="350px" style="object-fit: cover;">
+            <img src="assets/team/thymen.jpg" alt="Thymen Van de Steene" class="card-img-top" height="350px"
+              style="object-fit: cover;">
             <div id="team_thymen_image" class="card-img-top team-bio">
               <p id="team_thymen_bio" class="bio-tekst">Nog geen bio ingevuld.</p>
             </div>
-            <div class="badge" style="position: absolute; bottom: 8px; right:8px; background-color:#00e88b; font-size:1em;">Bestuurder</div>
+            <div class="badge"
+              style="position: absolute; bottom: 8px; right:8px; background-color:#00e88b; font-size:1em;">Bestuurder
+            </div>
 
           </div>
           <div class="card-body">
@@ -170,11 +269,14 @@
       <div class="col">
         <div class="card h-100">
           <div style="position: relative;">
-            <img src="assets/team/dante.jpg" alt="Dante Van Poucke" class="card-img-top" height="350px" style="object-fit: cover;">
+            <img src="assets/team/dante.jpg" alt="Dante Van Poucke" class="card-img-top" height="350px"
+              style="object-fit: cover;">
             <div id="team_dante_image" class="card-img-top team-bio">
-              <p id="team_dante_bio"class="bio-tekst">Nog geen bio ingevuld.</p>
+              <p id="team_dante_bio" class="bio-tekst">Nog geen bio ingevuld.</p>
             </div>
-            <div class="badge" style="position: absolute; bottom: 8px; right:8px; background-color:#00e88b; font-size:1em;">Bestuurder</div>
+            <div class="badge"
+              style="position: absolute; bottom: 8px; right:8px; background-color:#00e88b; font-size:1em;">Bestuurder
+            </div>
           </div>
           <div class="card-body">
             <h5 class="card-title thick-underline">Dante Van Poucke</h5>
@@ -188,8 +290,11 @@
       <div class="col">
         <div class="card h-100">
           <div style="position: relative;">
-            <img src="assets/team/lei.jpg" alt="Lei Decappelle" class="card-img-top" height="350px" style="object-fit: cover;">
-            <div class="badge" style="position: absolute; bottom: 8px; right:8px; background-color:#00e88b; font-size:1em;">Schrijver</div>
+            <img src="assets/team/lei.jpg" alt="Lei Decappelle" class="card-img-top" height="350px"
+              style="object-fit: cover;">
+            <div class="badge"
+              style="position: absolute; bottom: 8px; right:8px; background-color:#00e88b; font-size:1em;">Schrijver
+            </div>
           </div>
           <div class="card-body">
             <h5 class="card-title thick-underline">Lei Decappelle</h5>
@@ -197,12 +302,15 @@
           </div>
         </div>
       </div>
-      
+
       <div class="col">
         <div class="card h-100">
           <div style="position: relative;">
-            <img src="assets/team/anton.jpg" alt="Anton Martin" class="card-img-top" height="350px" style="object-fit: cover;">
-            <div class="badge" style="position: absolute; bottom: 8px; right:8px; background-color:#00e88b; font-size:1em;">Schrijver</div>
+            <img src="assets/team/anton.jpg" alt="Anton Martin" class="card-img-top" height="350px"
+              style="object-fit: cover;">
+            <div class="badge"
+              style="position: absolute; bottom: 8px; right:8px; background-color:#00e88b; font-size:1em;">Schrijver
+            </div>
           </div>
           <div class="card-body">
             <h5 class="card-title thick-underline">Anton Martin</h5>
@@ -213,15 +321,149 @@
       <div class="col">
         <div class="card h-100">
           <div style="position: relative;">
-            <img src="assets/team/arnout.jpg" alt="Arnout Maet" class="card-img-top" height="350px" style="object-fit: cover;">
-            <div class="badge" style="position: absolute; bottom: 8px; right:8px; background-color:#00e88b; font-size:1em;">Schrijver</div>
+            <img src="assets/team/arnout.jpg" alt="Arnout Maet" class="card-img-top" height="350px"
+              style="object-fit: cover;">
+            <div class="badge"
+              style="position: absolute; bottom: 8px; right:8px; background-color:#00e88b; font-size:1em;">Schrijver
+            </div>
           </div>
           <div class="card-body">
             <h5 class="card-title thick-underline">Arnout Maet</h5>
             <p class="card-text">Onderzoeker @ <a href="https://molmod.ugent.be">CMM</a></p>
           </div>
         </div>
-    </section>
+      </div>
+    </div>
+
+    <!-- Dit is voor een groot scherm en wordt niet getoond op en GSM -->
+    <div id="groot-team" class="groot-lay-out">
+
+      <!-- Laat de ambassadeurs maar komen -->
+      <div style="display: grid; grid-template-columns: 1fr 2fr; margin: 2em 1em; max-width: 1200px;" class="card">
+        <div id="team_thymen_badge">
+          <div class="h-100">
+            <div style="position: relative">
+              <img src="assets/team/thymen.jpg" alt="Thymen Van de Steene" class="card-img-top" height="350px"
+                style="object-fit: cover;">
+              <div class="badge"
+                style="position: absolute; top: 316px; right:8px; background-color:#00e88b; font-size:1em;">
+                Bestuurder</div>
+
+            </div>
+            <div class="card-body">
+              <h5 class="card-title thick-underline">Thymen Van de Steene</h5>
+              <p>Stichter</p>
+            </div>
+          </div>
+        </div>
+        <div class="groot-hover" style="position: relative;">
+          <div id="team_thymen2_vragen" style="padding: 1em 2em;">Vragen nog niet ingevuld.</div>
+          <div id="team_thymen2_image" class="card-img-left team-bio2">
+            <p id="team_thymen2_bio" class="bio-tekst">Nog geen bio ingevuld.</p>
+          </div>
+          <div style="position: absolute; bottom: 10px; right: 40px; display: flex; justify-content: center;"> <span
+              class="groot-bol-1"> </span> <span class="groot-bol-2"> </span> </div>
+
+        </div>
+      </div>
+
+      <!-- Dante -->
+      <div style="display: grid; grid-template-columns: 1fr 2fr; margin: 2em 1em; max-width: 1200px;" class="card">
+        <div id="team_thymen_badge">
+          <div class="h-100">
+            <div style="position: relative">
+              <img src="assets/team/dante.jpg" alt="Dante Van Poucke" class="card-img-top" height="350px"
+                style="object-fit: cover;">
+              <div class="badge"
+                style="position: absolute; top: 316px; right:8px; background-color:#00e88b; font-size:1em;">
+                Bestuurder</div>
+
+            </div>
+            <div class="card-body">
+              <h5 class="card-title thick-underline">Dante Van Poucke</h5>
+              <p class="card-text">Onderzoeker @ <a href="https://www.idlab.ugent.be">IDLab</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="groot-hover" style="position: relative;">
+          <div id="team_dante2_vragen" style="padding: 1em 2em;">Vragen nog niet ingevuld.</div>
+          <div id="team_dante2_image" class="card-img-left team-bio2">
+            <p id="team_dante2_bio" class="bio-tekst">Nog geen bio ingevuld.</p>
+          </div>
+          <div style="position: absolute; bottom: 10px; right: 40px; display: flex; justify-content: center;"> <span
+              class="groot-bol-1"> </span> <span class="groot-bol-2"> </span> </div>
+
+        </div>
+      </div>
+    </div>
+      <!-- <div class="col">
+        <div class="card h-100">
+          <div style="position: relative;">
+            <img src="assets/team/dante.jpg" alt="Dante Van Poucke" class="card-img-top" height="350px"
+              style="object-fit: cover;">
+            <div id="team_dante2_image" class="card-img-top team-bio">
+              <p id="team_dante2_bio" class="bio-tekst">Nog geen bio ingevuld.</p>
+            </div>
+            <div class="badge"
+              style="position: absolute; bottom: 8px; right:8px; background-color:#00e88b; font-size:1em;">
+              Bestuurder</div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title thick-underline">Dante Van Poucke</h5>
+            <p class="card-text">Onderzoeker @ <a href="https://www.idlab.ugent.be">IDLab</a></p>
+          </div>
+        </div>
+      </div> -->
+      <div class="row row-cols-1 row-cols-xl-4 row-cols-md-3 row-cols-sm-2 g-4 groot-team">
+
+        <div class="col" style="margin: 1em 3em 1em 1em;">
+          <div class="card h-100">
+            <div style="position: relative;">
+              <img src="assets/team/lei.jpg" alt="Lei Decappelle" class="card-img-top" height="350px"
+                style="object-fit: cover;">
+              <div class="badge"
+                style="position: absolute; bottom: 8px; right:8px; background-color:#00e88b; font-size:1em;">Schrijver
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title thick-underline">Lei Decappelle</h5>
+              <p class="card-text">Onderzoeker en moraalfilosoof</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col" style="margin: 1em 3em; ">
+          <div class="card h-100">
+            <div style="position: relative;">
+              <img src="assets/team/anton.jpg" alt="Anton Martin" class="card-img-top" height="350px"
+                style="object-fit: cover;">
+              <div class="badge"
+                style="position: absolute; bottom: 8px; right:8px; background-color:#00e88b; font-size:1em;">Schrijver
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title thick-underline">Anton Martin</h5>
+              <p class="card-text">Onderzoeker @ <a href="https://quantumghent.github.io/">Quantum Group</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col" style="margin: 1em 1em 1em 3em;">
+          <div class="card h-100">
+            <div style="position: relative;">
+              <img src="assets/team/arnout.jpg" alt="Arnout Maet" class="card-img-top" height="350px"
+                style="object-fit: cover;">
+              <div class="badge"
+                style="position: absolute; bottom: 8px; right:8px; background-color:#00e88b; font-size:1em;">Schrijver
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title thick-underline">Arnout Maet</h5>
+              <p class="card-text">Onderzoeker @ <a href="https://molmod.ugent.be">CMM</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
 
   <!-- Contact Section -->
   <section id="contact">
@@ -239,10 +481,14 @@
 
   <footer>
     <p>&copy; 2025 Generatie met Dromen</p>
-    <p style="font-size: small;">Deze website samen met all inhoud is gemaakt zonder het gebruik van generatieve AI tenzij explicit vermeld.</p>
+    <p style="font-size: small;">Deze website samen met all inhoud is gemaakt zonder het gebruik van generatieve AI
+      tenzij explicit vermeld.</p>
   </footer>
   <script src="team_text.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
   <script src="scripts.js"></script>
 </body>
+
 </html>

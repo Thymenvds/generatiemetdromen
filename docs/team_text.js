@@ -13,7 +13,7 @@ info_team={
                 "answer": "5",
                 "description": "Lorem ipsum Lorem ipusm lKSLMJFSKLJFKDSLjsdfklmjfksldqjfkdsf dskfqlmkjdsfjsq dsklmfjksd sjqdfm dsqlmksjdf dkslmfjskdfj kdslmfqjksldmfj kldsmfjsklmfj"
             },
-        "Geef een robot niet meer dan de maximale intellgientie die de taak vereist.":{
+        "Geef een robot niet meer dan de maximale intelligentie die de taak vereist.":{
             "type": "stat",
             "answer":"Akkoord"
 
@@ -43,10 +43,12 @@ let info_bio={
     "team_thymen":"Het gebruik van AI in applicaties ligt bijna altijd in een grijze zone. Het evenwicht tussen automatisatie en mankracht is een zoektocht die feedback en input vraagt van de hele maatschappij.",
     "team_dante": "Het gebruik van AI in applicaties ligt bijna altijd in een grijze zone. Het evenwicht tussen automatisatie en mankracht is een zoektocht die feedback en input vraagt van de hele maatschappij."
 }
+
+// Schrijf de data van de bio voor een klein scherm
 for (let i of team_ids){
     document.getElementById(i+"_bio").innerText= info_bio[i]
 }
-
+// Schrijf de data van de vragen voor een klein scherm
 let myhtml=""
 for (let i of team_ids){
     let init_myhtml = `
@@ -117,3 +119,37 @@ document.getElementById(i).innerHTML = myhtml;
     })
 }
 // console.log(myhtml)
+// Schrijf de data van de bio voor een groot scherm
+for (let i of team_ids){
+    document.getElementById(i+"2_bio").innerText= info_bio[i]
+}
+// Schrijf de data van de vragen voor een groot scherm
+myhtml=""
+for (let i of team_ids){
+    let myhtml=``
+    for (var key in info_team[i]){
+        let info_i = info_team[i][key]
+        if (info_i["type"]=="mc"){
+        let bollen = Array(5).fill(`<span class="bolletje"> </span>`)
+        bollen[Number(info_i["answer"])-1] = `<span class="bolletje" style="background-color:#00e88b; height:17px; width:17px; border:1.5px solid black;" > </span>`
+        myhtml += `        
+        <p>${key}</p>
+        <div class="bolletjes-layout"> ${bollen.join(' ')} </div>
+        <hr>
+        `
+    }
+    else if (info_i["type"]=="stat") {
+        myhtml += `        
+        <p>${key}</p>
+        <p style="margin:15px 0px;"> <span style="background-color:#00e88b; color:white; padding: 7px; border-radius:6px; font-family: Funnel Display; font-weight:700; font-size:16px;"> ${info_i["answer"]} </span></p>
+        <hr>
+        `
+    } 
+}
+// myhtml += `
+// <div class="bolletjes-layout"> <span class="bolletje" style="background-color:black; height:17px; width:17px; border:1.5px solid black;" > </span> <span class="bolletje" style="background-color:white; height:17px; width:17px; border:1.5px solid black;" > </span> </div>
+// `
+
+console.log("HTML vragen voor groot scherm ", myhtml)
+document.getElementById(i + "2_vragen").innerHTML = myhtml;
+}
