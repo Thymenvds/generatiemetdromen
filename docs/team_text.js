@@ -38,6 +38,14 @@ info_team={
         }   
     }
 }
+// Plaats de bios na API call
+let info_bio={
+    "team_thymen":"Het gebruik van AI in applicaties ligt bijna altijd in een grijze zone. Het evenwicht tussen automatisatie en mankracht is een zoektocht die feedback en input vraagt van de hele maatschappij.",
+    "team_dante": "Het gebruik van AI in applicaties ligt bijna altijd in een grijze zone. Het evenwicht tussen automatisatie en mankracht is een zoektocht die feedback en input vraagt van de hele maatschappij."
+}
+for (let i of team_ids){
+    document.getElementById(i+"_bio").innerText= info_bio[i]
+}
 
 let myhtml=""
 for (let i of team_ids){
@@ -75,7 +83,7 @@ for (let i of team_ids){
 
 document.getElementById(i).innerHTML = myhtml;
     
-
+// console.log(myhtml)
 
     document.getElementById(i+"_knop").addEventListener("click", (e)=>{
         e.target.style.transitionDelay= "0ms"
