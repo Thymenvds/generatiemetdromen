@@ -13,8 +13,6 @@ services:
     ports:
       - "8080:8080"
       - "8000:8000"
-    #  - "80:80"
-    #  - "443:443"
     volumes:
      - caddy_data:/data
      - caddy_config:/config
@@ -40,5 +38,32 @@ services:
       - python_server
 
    
+################## productie docker-compose
+# version: '3.8'
+# networks:
+#   caddy_public:
+    
+# volumes:
+#   caddy_data:
+#   caddy_config:
 
-
+# services:
+#   caddy:
+#     image: caddy
+#     ports:
+#      - "80:80"
+#      - "443:443"
+#     volumes:
+#      - caddy_data:/data
+#      - caddy_config:/config
+#      - ./Caddyfile:/etc/caddy/Caddyfile 
+#     networks:
+#      - caddy_public
+#   app:
+#      build:
+#         context: .
+#         dockerfile: Dockerfile
+#      networks:
+#         - caddy_public
+#      volumes:
+#        - "./docs/blog/logs:/app/docs/blog/logs"
