@@ -1,47 +1,7 @@
-version: '3.8'
-networks:
-  caddy_public:
-  python_server:
-    
-volumes:
-  caddy_data:
-  caddy_config:
-
-services:
-  caddy:
-    image: caddy
-    ports:
-      - "8080:8080"
-      - "8000:8000"
-    volumes:
-     - caddy_data:/data
-     - caddy_config:/config
-     - ./Caddyfile:/etc/caddy/Caddyfile 
-    networks:
-     - caddy_public
-     - python_server
-  app:
-     build:
-        context: .
-        dockerfile: Dockerfile
-     networks:
-        - caddy_public
-     volumes:
-       - "./docs/blog/logs:/app/docs/blog/logs"
-       - "./db:/db"
-  mijnvisie:
-    build:
-      dockerfile: mijnvisie/Dockerfile
-    volumes:
-      - "./db:/mijnvisie/db"
-    networks:
-      - python_server
-
-   
-################## productie docker-compose
 # version: '3.8'
 # networks:
 #   caddy_public:
+#   python_server:
     
 # volumes:
 #   caddy_data:
@@ -51,14 +11,15 @@ services:
 #   caddy:
 #     image: caddy
 #     ports:
-#      - "80:80"
-#      - "443:443"
+#       - "8080:8080"
+#       - "8000:8000"
 #     volumes:
 #      - caddy_data:/data
 #      - caddy_config:/config
 #      - ./Caddyfile:/etc/caddy/Caddyfile 
 #     networks:
 #      - caddy_public
+#      - python_server
 #   app:
 #      build:
 #         context: .
@@ -67,3 +28,43 @@ services:
 #         - caddy_public
 #      volumes:
 #        - "./docs/blog/logs:/app/docs/blog/logs"
+#        - "./db:/db"
+#   mijnvisie:
+#     build:
+#       dockerfile: mijnvisie/Dockerfile
+#     volumes:
+#       - "./db:/mijnvisie/db"
+#     networks:
+#       - python_server
+
+   
+################## productie docker-compose
+version: '3.8'
+networks:
+  caddy_public:
+    
+volumes:
+  caddy_data:
+  caddy_config:
+
+services:
+  caddy:
+    image: caddy
+    ports:
+     - "80:80"
+     - "443:443"
+     - "8080:8080"
+    volumes:
+     - caddy_data:/data
+     - caddy_config:/config
+     - ./Caddyfile:/etc/caddy/Caddyfile 
+    networks:
+     - caddy_public
+  app:
+     build:
+        context: .
+        dockerfile: Dockerfile
+     networks:
+        - caddy_public
+     volumes:
+       - "./docs/blog/logs:/app/docs/blog/logs"
