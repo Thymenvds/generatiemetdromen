@@ -106,15 +106,17 @@
         display: none;
       }
     }
+    .ambassadeur-lay-out{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
 
     @media screen and (max-width: 575px) {
-      .groot-team {
+      #groot-team, #groot-team2 {
         display: none;
       }
 
-      #groot-team {
-        display: none;
-      }
     }
 
     .groot-hover:hover>.team-bio2 {
@@ -365,8 +367,8 @@
       </div>
 
       <!-- Dante -->
-      <div style="display: grid; grid-template-columns: 1fr 2fr; margin: 2em 1em; max-width: 1200px;" class="card">
-        <div id="team_thymen_badge">
+      <div style="display: grid; grid-template-columns: 1fr 2fr; margin: 2em 1em; max-width: 1100px;" class="card">
+        <div id="team_dante_badge">
           <div class="h-100">
             <div style="position: relative">
               <img src="assets/team/dante.jpg" alt="Dante Van Poucke" class="card-img-top" height="350px"
@@ -411,9 +413,9 @@
           </div>
         </div>
       </div> -->
-      <div class="row row-cols-1 row-cols-xl-4 row-cols-md-3 row-cols-sm-2 g-4 groot-team" style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+      <div id="groot-team2" class="ambassadeur-lay-out">
 
-        <div class="col" style="margin-left: 1em;">
+        <div class="col" style="margin-left: 1em; max-width: 700px;">
           <div class="card h-100">
             <div style="position: relative;">
               <img src="assets/team/lei.jpg" alt="Lei Decappelle" class="card-img-top" height="350px"
@@ -429,7 +431,7 @@
           </div>
         </div>
 
-        <div class="col" style="margin-left: 1em; ">
+        <div class="col" style="margin-left: 1em; max-width: 700px;">
           <div class="card h-100">
             <div style="position: relative;">
               <img src="assets/team/anton.jpg" alt="Anton Martin" class="card-img-top" height="350px"
@@ -444,7 +446,7 @@
             </div>
           </div>
         </div>
-        <div class="col" style="margin-left: 1em;">
+        <div class="col" style="margin-left: 1em; max-width: 700px;">
           <div class="card h-100">
             <div style="position: relative;">
               <img src="assets/team/arnout.jpg" alt="Arnout Maet" class="card-img-top" height="350px"
