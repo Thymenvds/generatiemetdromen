@@ -2,10 +2,9 @@ let team_ids = ["team_thymen", "team_dante"]
 
 info_team = {
     "team_thymen": {
-        "AI-chatbots kunnen verslavend zijn.":
-        {
+        "AI zal het kritisch denken verminderen.": {
             "type": "mc",
-            "answer": "4",
+            "answer": "2",
             "description": null
         },
         "Regularisatie moet een prioriteit zijn boven innovatie.": {
@@ -13,11 +12,9 @@ info_team = {
             "answer": "5",
             "description": "Lorem ipsum Lorem ipusm lKSLMJFSKLJFKDSLjsdfklmjfksldqjfkdsf dskfqlmkjdsfjsq dsklmfjksd sjqdfm dsqlmksjdf dkslmfjskdfj kdslmfqjksldmfj kldsmfjsklmfj"
         },
-        "AI zal het kritisch denken verminderen.": {
-            "type": "mc",
-            "answer": "2",
-            "description": null
-
+        "Er is een actieve houding nodig om nieuwe levenswijzen een kans te geven.":{
+            "type": "stat",
+            "answer": "Akkoord"
         }
     },
 
