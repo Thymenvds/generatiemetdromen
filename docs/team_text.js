@@ -40,7 +40,7 @@ info_team = {
 // Plaats de bios na API call
 let info_bio = {
     "team_thymen": "Het gebruik van AI in applicaties ligt bijna altijd in een grijze zone. Het evenwicht tussen automatisatie en mankracht is een zoektocht die feedback en input vraagt van de hele maatschappij.",
-    "team_dante": "Het gebruik van AI in applicaties ligt bijna altijd in een grijze zone. Het evenwicht tussen automatisatie en mankracht is een zoektocht die feedback en input vraagt van de hele maatschappij."
+    "team_dante": "De evolutie van artificiële intelligentie biedt een enorm potentieel om een betere, misschien zelfs utopische wereld te creëren. Toch is het cruciaal om goed te informeren, na te denken en te experimenteren met de impact die deze technologie heeft op de mens, de samenleving en onze planeet"
 }
 
 // Schrijf de data van de bio voor een klein scherm
